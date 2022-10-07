@@ -32,7 +32,7 @@ Deve ser possível:
 
      . criar - criar um closet (não é obrigatório ter looks dentro de um closet para ele existir)
 
-CAMINHO ---> GET/api/closet/id:
+CAMINHO ---> GET/api/closet/:id
  
  ---
 
@@ -52,7 +52,7 @@ CAMINHO ---> POST/api/adiciona/roupa/look
 
 A API 3 é responsável por DEVOLVER as peças de roupa ATRAVÉS do ID, ou seja, vai buscar as peças de roupa recorrendo ao ID de cada uma.
 
-CAMINHO ---> GET/api/roupa/id:
+CAMINHO ---> GET/api/roupa/:id
 
 ---
 
