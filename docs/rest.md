@@ -4,10 +4,10 @@
 
 ## LISTA DE APIs ATUAL
 
-
 1. - API que carrega o closet;
 1. - API que adiciona roupa ao LOOK;
 1. - API que devolva as peças de roupa através do ID;
+1. - API que devolva todas as peças de roupa;
 1. - API do LOGIN;
 1. - API que adicione um LOOK ao CLOSET;
 1. - API que devolve um LOOK através do ID;
@@ -18,9 +18,11 @@
 
 ## DOCUMENTAÇÂO DO FUNCIONAMENTO da API 1
 
-A API 1 é responsável por carregar um CLOSET, ou seja, mostrará os LOOKs que estão armazenados dentro de um DETERINADO CLOSET,
-  . limite de até 10 CLOSETs POR UTILIZADOR;
-  . apenas UTILIZADORES válidos, têm acesso a esta ação;
+A API 1 é responsável por carregar um CLOSET, ou seja, mostrará os LOOKs que estão armazenados dentro de um DETERINADO CLOSET:
+
+    . limite de até 10 CLOSETs POR UTILIZADOR;
+    . apenas UTILIZADORES válidos, têm acesso a esta ação;
+
 deve ser possível selecionar o CLOSET pretendido, os LOOKs só serão mostrados quando se estiver dentro do CLOSET.
 
 Deve ser possível:
@@ -32,7 +34,7 @@ Deve ser possível:
 
      . criar - criar um closet (não é obrigatório ter looks dentro de um closet para ele existir)
 
-CAMINHO ---> GET/api/closet/id:
+CAMINHO ---> GET/api/closet/:id
  
  ---
 
@@ -52,13 +54,21 @@ CAMINHO ---> POST/api/adiciona/roupa/look
 
 A API 3 é responsável por DEVOLVER as peças de roupa ATRAVÉS do ID, ou seja, vai buscar as peças de roupa recorrendo ao ID de cada uma.
 
-CAMINHO ---> GET/api/roupa/id:
+CAMINHO ---> GET/api/roupa/:id
 
 ---
 
 ## DOCUMENTAÇÂO DO FUNCIONAMENTO da API 4
 
-A API 4 é responsável por fazer o LOGIN, ou seja, quando um VISITANTE se torna um UTILIZADOR, isto acontece quando o VISITANTE carrega no BOTÃO de LOGIN
+A API 4 é responsável por DEVOLVER todas as peças de roupa, ou seja, todas as peças de roupa.
+
+CAMINHO ---> GET/api/roupa
+
+---
+
+## DOCUMENTAÇÂO DO FUNCIONAMENTO da API 4
+
+A API 5 é responsável por fazer o LOGIN, ou seja, quando um VISITANTE se torna um UTILIZADOR, isto acontece quando o VISITANTE carrega no BOTÃO de LOGIN
 e torna-se num UTILIZADOR, para isso:
 
         . mostra um campo de texto, que pede um nome(CAMPO OBRIGATÓRIO);
