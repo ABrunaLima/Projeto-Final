@@ -1,12 +1,16 @@
+import styles from '/styles/navbar.module.css'
+import { Login } from './login'
+
+
 export function NavBar(){
     return(
-        <div>
-            <img src="/LogoPreto.png"/>
-            <span>
-                 <button>Closets</button>
-            </span> 
-           
-
+        <div className={styles.navBar}>
+            <img src="/LogoPreto.png" />
+            <h3>MyVest</h3>
+            <div>
+                <button>Closets</button>
+            </div>
+            <Login /> 
         </div>
     )
 }

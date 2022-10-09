@@ -2,9 +2,25 @@
 
 .container{
     background-color: transparent;
-    font-family: 'Noto Sans', sans-serif;
-    color: #f49cff;
-    width: 200px;
-    height: 200px;
 }
 
+.navBar{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 50px;
+    color: #f49cff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.navBar button{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    border: none;
+    background-color: transparent;
+    color: #f49cff;
+    font-family: 'Noto Sans', sans-serif;
+    row-gap: 50px;
+
+}
