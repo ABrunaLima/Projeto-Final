@@ -1,8 +1,11 @@
 export function NavBar(){
     return(
         <div>
-            <img/>
-            <button></button>
+            <img src="/LogoPreto.png"/>
+            <span>
+                 <button>Closets</button>
+            </span> 
+           
 
         </div>
     )

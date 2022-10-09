@@ -3,6 +3,8 @@
 .container{
     background-color: transparent;
     font-family: 'Noto Sans', sans-serif;
-   
-
+    color: #f49cff;
+    width: 200px;
+    height: 200px;
 }
+
