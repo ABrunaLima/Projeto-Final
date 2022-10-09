@@ -1,26 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
 
-.container{
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
 }
 
-.navBar{
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    height: 50px;
-    color: #f49cff;
-    font-family: 'Noto Sans', sans-serif;
+.marca{
+     color: var(--roxo-escuro);
+     font-family: 'Noto Sans', sans-serif;
+
 }
 
-.navBar button{
+.marca img{
     display: flex;
-    flex-direction: row;
-    width: auto;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+.textos{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 525;
+    color: black;
+    gap: 30px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.textos :hover{
+    color: var(--roxo-escuro);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.textos button{
     border: none;
-    background-color: transparent;
-    color: #f49cff;
-    font-family: 'Noto Sans', sans-serif;
-    row-gap: 50px;
 
 }
+
+.textos button:hover{
+    color: var(--roxo-escuro);
+    cursor: pointer;
+}
+
+

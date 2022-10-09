@@ -8,7 +8,6 @@ export function Login() {
     return (
         <div>
             <div class={styles.botaoLogin}><button onClick={() => ""}><img src="/login.png" /></button></div>
-            oioioio
         </div>
     )
 }
