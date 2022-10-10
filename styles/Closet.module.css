@@ -33,21 +33,21 @@
 
     align-items: center;
     /* background-color: red; */
-    border: 5px black;
+    /* border: 5px black; */
     display: flex;
     flex-direction: row;
     gap: 10px;
-    height: 35vh;
+    height: 25vh;
     text-align: center;
     margin-top: 15px;
-    width: 70vw;
+    width: 45vw;
 
 }
 
 .area {
 
     border: 5px solid black;
-    height: 325px;
+    height: 230px;
     width: 100vw;
 
 
