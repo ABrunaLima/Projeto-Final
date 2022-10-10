@@ -5,12 +5,12 @@
 ## LISTA DE APIs ATUAL
 
 1. - API que carrega o closet;
-1. - API que adiciona roupa ao LOOK;
-1. - API que devolva as peças de roupa através do ID;
-1. - API que devolva todas as peças de roupa;
-1. - API do LOGIN;
-1. - API que adicione um LOOK ao CLOSET;
-1. - API que devolve um LOOK através do ID;
+2. - API que adiciona roupa ao LOOK;
+3. - API que devolva as peças de roupa através do ID;
+4. - API que devolva todas as peças de roupa;
+5. - API do LOGIN;
+6. - API que adicione um LOOK ao CLOSET;
+7. - API que devolve um LOOK através do ID;
 
 (atualizar caso hajam mais APIs necessárias)
 
@@ -34,7 +34,7 @@ Deve ser possível:
 
      . criar - criar um closet (não é obrigatório ter looks dentro de um closet para ele existir)
 
-CAMINHO ---> GET/api/closet/:id
+CAMINHO ---> GET/api/closet
  
  ---
 
@@ -86,7 +86,7 @@ CAMINHO ---> GET/api/login
 
 ## DOCUMENTAÇÂO DO FUNCIONAMENTO da API 5
 
-A API 5 é a responsável por ADICIONAR um LOOK ao CLOSET, ou seja, quando um UTILIZADOR criar um LOOK, esta API é responsável por armazenar este LOOK 
+A API 6 é a responsável por ADICIONAR um LOOK ao CLOSET, ou seja, quando um UTILIZADOR criar um LOOK, esta API é responsável por armazenar este LOOK 
 em um determinado CLOSET
 
     .apenas UTILIZADORES válidos têm acesso a esta ação;
@@ -111,7 +111,7 @@ Deve ser possível:
     . selecionar apenas um LOOK de cada vez;
     . se o LOOK for eliminado, o ID também é eliminado, para não acumular na cache
                     
-CAMINHO ---> GET/api/look
+CAMINHO ---> GET/api/look/:id
 
 ---
 
