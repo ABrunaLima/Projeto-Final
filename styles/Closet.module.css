@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+
+.closet {
+
+    align-items: center;
+    /* background-color: aquamarine; */
+    background-size: cover;
+    /* border: 5px dotted black; */
+    display: flex;
+    color: white;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+
+}
+
+.title {
+
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border: 5px orange;
+    color: black;
+    margin-bottom: 750px;
+    justify-content: center;
+
+}
+
+
+.lookEachArea {
+
+    align-items: center;
+    /* background-color: red; */
+    /* border: 5px black; */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 25vh;
+    text-align: center;
+    margin-top: 15px;
+    width: 45vw;
+
+}
+
+.area {
+
+    border: 5px solid black;
+    height: 230px;
+    width: 100vw;
+
+
+}
+
+.navCloset {
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.marcaCloset {
+    color: var(--roxo-escuro);
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+.marcaCloset img {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 100px;
+}
+
+.textosCloset {
+    align-items: center;
+    color: black;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 525;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.textosCloset :hover {
+    color: var(--roxo-escuro);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.textosCloset button {
+    border: none;
+
+}
+
+.textosCloset button:hover {
+    color: var(--roxo-escuro);
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
