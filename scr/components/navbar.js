@@ -11,7 +11,7 @@ export function NavBar() {
         },
         {
             label: "Closet",
-            path: "../pages/closet"
+            path: "../pages/closet.jsx"                 //editado, testes de caminho        Daniel
         }
     ]
 
