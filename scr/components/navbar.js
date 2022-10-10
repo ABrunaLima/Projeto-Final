@@ -1,17 +1,18 @@
 import styles from '/styles/navbar.module.css'
 import { Login } from './login'
 import { useRouter } from 'next/router'
+import closet from '../../pages/closet'
 
 
 export function NavBar() {
     const navItems = [
         {
             label: "Home",
-            path: "../pages/index"
+            path: "/index"
         },
         {
             label: "Closet",
-            path: "../pages/closet.jsx"                 //editado, testes de caminho        Daniel
+            path: "/closet"                 //editado, testes de caminho        Daniel
         }
     ]
 
@@ -34,8 +35,24 @@ export function NavBar() {
 }
 
 function NavItem({ path, label }) {
-    const router = useRouter
-    return <span onClick={() => router.push(path)}>{label}</span>
+
+    const router = useRouter()
+
+    const handleClick = (e) => {
+
+        e.preventDefault()
+        router.push(path)
+
+    }
+
+    return (
+
+        //o href, busca o caminho da página que é selecionado com o onClick quando se carrega numa das labels(botões) 
+        <span href={path} onClick={handleClick}>
+            {label}
+        </span>
+
+    )
 }
 
 
