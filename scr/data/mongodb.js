@@ -15,4 +15,4 @@ async function getMongoCollection(dbName, collectionName) {
 }
 export {
     getMongoCollection
-}
+}               
