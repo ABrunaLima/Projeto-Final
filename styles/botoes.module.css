@@ -1,0 +1,13 @@
+.botaoLogin {
+    background-color: transparent;
+    border: 0;
+
+}
+
+.botaoLogin img {
+    background-color: rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+
+
+}
