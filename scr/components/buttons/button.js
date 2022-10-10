@@ -1,7 +1,8 @@
-function botoes(texto) {
+import styles from "../../../styles/Button.module.css"
+function Button(props) {
     return (
         <div>
-            <buttons> {texto}</buttons>
+            <button onClick={props.onClick}> {props.texto}</button>
         </div>
     )
 }
