@@ -8,7 +8,7 @@ export function NavBar() {
     const navItems = [
         {
             label: "Home",
-            path: "/index"
+            path: "/"
         },
         {
             label: "Closet",
