@@ -1,7 +1,7 @@
-function botoes(texto) {
+export function Botao({texto}) {
     return (
         <div>
-            <buttons> {texto}</buttons>
+            <button>{texto}</button>
         </div>
     )
 }
