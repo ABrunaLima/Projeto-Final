@@ -12,6 +12,7 @@ export default function Home() {
       <Head>
         <title>MyVest</title>
 
+//tentando alterar o icon da pagina
         <link rel="icon" href="avicon_io/vest.ico" />
 
         {/*<link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
