@@ -6,7 +6,6 @@
     justify-content: space-between;
     background-color: transparent;
     padding: 10px 50px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
 }
 
 .marca{
@@ -42,12 +41,14 @@
 
 .textos button{
     border: none;
+    background-color: transparent;
 
 }
 
 .textos button:hover{
     color: var(--roxo-escuro);
     cursor: pointer;
+
 }
 
 
