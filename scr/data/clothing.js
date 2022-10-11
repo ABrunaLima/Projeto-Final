@@ -32,7 +32,9 @@ async function getAllClothing() {
 
 
 
-//adicionar roupa a look especifico
+//adicionar roupa a um look especifico
+
+
 
 
 export {
