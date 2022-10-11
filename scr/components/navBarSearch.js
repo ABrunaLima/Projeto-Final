@@ -18,10 +18,13 @@ export function NavBar() {
 
 
     return (
-        <div>
+        <>
             <nav className={styles.nav}>
                 <div className={styles.marca}>
                     <img src="/images/LogoPreto.png" />
+                </div>
+                <div>
+                    //coloca aqui a search bar
                 </div>
                 <div className={styles.textos}>
                     {
@@ -30,7 +33,7 @@ export function NavBar() {
                     <Login />
                 </div>
             </nav>
-        </div>
+        </>
     )
 }
 

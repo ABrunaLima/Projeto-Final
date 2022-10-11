@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
 
-.nav{
+.nav {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,20 +9,20 @@
     padding: 10px 50px;
 }
 
-.marca{
-     color: var(--roxo-escuro);
-     font-family: 'Noto Sans', sans-serif;
+.marca {
+    color: var(--roxo-escuro);
+    font-family: 'Noto Sans', sans-serif;
 
 }
 
-.marca img{
+.marca img {
     display: flex;
     justify-content: center;
     width: 100px;
     height: 100px;
 }
 
-.textos{ 
+.textos {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,22 +34,20 @@
     position: relative;
 }
 
-.textos :hover{
+.textos :hover {
     color: var(--roxo-escuro);
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
-.textos button{
+.textos button {
     border: none;
     background-color: transparent;
 
 }
 
-.textos button:hover{
+.textos button:hover {
     color: var(--roxo-escuro);
     cursor: pointer;
 
 }
-
-
