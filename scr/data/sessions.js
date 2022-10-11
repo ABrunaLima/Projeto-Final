@@ -1,5 +1,5 @@
 const { ObjectId } = require("mongodb")
-const { generateToken } = require("../services/common")
+
 const { getMongoCollection } = require("./mongodb")
 
 const DB_NAME = "my_closet"

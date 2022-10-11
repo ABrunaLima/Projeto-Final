@@ -16,10 +16,21 @@ async function insertLookToCloset(look) {
 
 }
 
-//mostrar todos os looks armazenados
-async function getCloset(looks) {
+//inserir roupa a um look
+async function insertClothingToLook(look, userId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.find(looks)
+    //adicionar roupa que tenha um id existente
+    return await collection.updateOne(
+        { userId: userId },
+        { $set: look },
+        { upserted: true }
+    )
+}
+
+//mostrar todos os looks armazenados
+async function getCloset() {
+    const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
+    return await collection.find().toArray()
 
 }
 
@@ -41,5 +52,6 @@ export {
     insertLookToCloset,
     getCloset,
     getLookById,
-    removeLookById
+    removeLookById,
+    insertClothingToLook
 }

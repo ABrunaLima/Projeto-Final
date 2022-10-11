@@ -10,6 +10,12 @@ async function getUserByEmail(userEmail) {
     return await collection.findOne({ email: userEmail })
 }
 
+//chamar a conta pelo id
+async function getUserById(userId) {
+    const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
+    return await collection.findOne({ _id: userId })
+}
+
 //adicionar a conta e conseguir um id
 async function addUser(user) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
