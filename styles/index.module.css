@@ -2,5 +2,6 @@
     background-image: url("../public/images/minimlaista-wallpaper.jpg.webp");
     background-size: cover;
     width: 100vw;
-    height: calc(100vh - 120px);
+    /* height: calc(100vh - 120px); */
+    height: 100vh;
 }
