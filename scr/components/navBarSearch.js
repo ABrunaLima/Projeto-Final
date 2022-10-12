@@ -34,7 +34,7 @@ export function NavBarSearch() {
                 </div>
                 <div className={styles.textos}>
                     {
-                        navItems.map(n => <NavItem {...n} />)
+                        navItems.map(n => <NavItem key={n.label} {...n} />)
                     }
                     <Login />
                 </div>
