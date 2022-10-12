@@ -11,13 +11,13 @@ export default function Home() {
 
     <div>
 
-      <div>
+      <div className={styles2.fundo}>
 
         <NavBar className={styles.navBar} />
 
       </div>
 
-      <div className={styles2.fundo}>
+      <div>
 
         <Head>
           <title>MyVest</title>

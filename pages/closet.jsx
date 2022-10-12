@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import styles from '../styles/Closet.module.css'
 import { NavBar } from '../scr/components/navbar'
+
 import dropDownButton from '../scr/components/buttons/DropDownButton'
 import DropDownButton from '../scr/components/buttons/DropDownButton'
 
@@ -21,12 +22,12 @@ export default function closet() {
     return (
         //**************************************************************************************************************
         <div>
-            <div>
+            <div className={styles.fundoCloset}>
                 <div>
                     <NavBar />
                 </div>
 
-                <div className={styles.fundoCloset}>
+                <div>
                     <div className={styles.closet}>
                         <div className={styles.title} for="titulo-da-pagina">
                             <h2 className={styles.h2}>Closets</h2>
