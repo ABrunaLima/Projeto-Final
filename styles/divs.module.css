@@ -1,0 +1,44 @@
+.pagina {
+    background-image: url("../public/images/minimlaista-wallpaper.jpg.webp");
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 120px);
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    margin-right: 90%;
+    background-color: transparent;
+    width: 110px;
+
+}
+
+.botoes button:hover {
+    background-color: rgba(0, 0, 0, 0.146);
+}
+
+.container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
+.botoes button {
+    background-color: transparent;
+    height: 500px;
+    width: 90px;
+    font-size: x-large;
+
+}
+
+.borda {
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.244);
+    height: 700px;
+    width: 700px;
+    border: 2px solid black;
+
+}
