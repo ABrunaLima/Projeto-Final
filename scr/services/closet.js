@@ -3,9 +3,10 @@ import {
     insertNewCloset,
     insertLookToCloset,
     getClosets,
-    getLooksOnEspecificClosetById,
+    getAClosetById,
     getMaxClosetId,
-    removeClosetById
+    removeClosetById,
+    removeOneLookFromClosetById
 } from "../data/closet";
 
 
@@ -17,7 +18,7 @@ async function createCloset(looks, title, userId) {
         closet: looks,
         title: title,
         userId: userId,
-        idx: maxId + 1 //vai numerar os closets (closet 1, closet 2....)
+        idx: JSON.stringify(maxId) + 1 //vai numerar os closets (closet 1, closet 2....)
     })
     return closetId
 }
@@ -28,15 +29,13 @@ async function saveLookOnCloset(lookId, userId) {
     return savedLook
 }
 
-
-//mostrar um closet a partir do id do mesmo 
+//mostrar todos os looks de um closet
 async function showOneCloset(closetId) {
-    const closet = await getLooksOnEspecificClosetById(closetId)
-    if (closet == null) {
-        return "Closet não encontrado!!!!!!"
-    }
+    const closet = await getAClosetById(closetId)
     return closet
+
 }
+
 
 //mostrar todos os closets disponíneis
 async function showAllClosets() {
@@ -49,12 +48,19 @@ async function moveClosetToTrash(closetId) {
     return removeClosetById(closetId)
 }
 
+
+
+async function moveLookOfClosetToTrash(closetId, lookId) {
+    return removeOneLookFromClosetById(closetId, lookId)
+}
+
 export {
     createCloset,
     showAllClosets,
     showOneCloset,
     saveLookOnCloset,
-    moveClosetToTrash
+    moveClosetToTrash,
+    moveLookOfClosetToTrash
 
 }
 

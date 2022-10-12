@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "populate": "node tasks/populate.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

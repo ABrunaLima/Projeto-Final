@@ -26,10 +26,15 @@ async function insertLookToCloset(lookId, userId) {
     //adicionar roupa que tenha um id existente
     return await collection.updateOne(
         { userId: userId },
-        { $push: { look: { lookId } } },
+        { $push: { closet: { lookId } } },
         { upserted: true }
     )
 }
+
+// async function getALookFromClosetById(lookId, closetId) {
+//     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
+//     return await collection.findOne({ looks: new ObjectId(lookId) })
+// }
 
 //mostrar todos os closets armazenados
 async function getClosets() {
@@ -38,22 +43,32 @@ async function getClosets() {
 
 }
 
-async function getLooksOnEspecificClosetById(closetId) {
+async function getAClosetById(closetId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.findOne({ _id: ObjectId(closetId) }).toArray()
+    return await collection.findOne({ _id: new ObjectId(closetId) })
 }
 
 //remover closet por Id
 async function removeClosetById(closetId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.delete({ _idCloset: ObjectId(closetId) })
+    return await collection.deleteOne({ _id: new ObjectId(closetId) })
+}
+
+async function removeOneLookFromClosetById(closetId, lookId) {
+    const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
+    return await collection.updateOne(
+        { _id: closetId },
+        { $pull: { looks: { lookId } } }
+    )
 }
 
 export {
     insertNewCloset,
     insertLookToCloset,
     getClosets,
-    getLooksOnEspecificClosetById,
+    getAClosetById,
     getMaxClosetId,
-    removeClosetById
+    removeClosetById,
+    removeOneLookFromClosetById,
+    getALookFromClosetById
 }

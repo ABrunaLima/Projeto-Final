@@ -33,13 +33,13 @@ async function updateClothingToLook(lookId, clothId) {
 //mostra look armazenada através do Id
 async function getLookById(lookId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.findOne({ _idLook: ObjectId(lookId) })
+    return await collection.findOne({ _idLook: new ObjectId(lookId) })
 }
 
-//remover look do closet por Id
+//remover look por Id
 async function removeLookById(lookId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.delete({ _idLook: ObjectId(lookId) })
+    return await collection.delete({ _idLook: new ObjectId(lookId) })
 }
 
 export {
