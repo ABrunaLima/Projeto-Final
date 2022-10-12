@@ -1,11 +1,11 @@
 
-import { cloneElement } from "react";
 import {
     insertNewCloset,
     insertLookToCloset,
     getClosets,
     getLooksOnEspecificClosetById,
-    getMaxClosetId
+    getMaxClosetId,
+    removeClosetById
 } from "../data/closet";
 
 
@@ -17,7 +17,7 @@ async function createCloset(looks, title, userId) {
         closet: looks,
         title: title,
         userId: userId,
-        idx: maxId + 1
+        idx: maxId + 1 //vai numerar os closets (closet 1, closet 2....)
     })
     return closetId
 }
@@ -29,6 +29,7 @@ async function saveLookOnCloset(lookId, userId) {
 }
 
 
+//mostrar um closet a partir do id do mesmo 
 async function showOneCloset(closetId) {
     const closet = await getLooksOnEspecificClosetById(closetId)
     if (closet == null) {
@@ -37,15 +38,23 @@ async function showOneCloset(closetId) {
     return closet
 }
 
+//mostrar todos os closets disponíneis
 async function showAllClosets() {
     const closets = await getClosets()
     return closets
 }
 
+//apagar um closet
+async function moveClosetToTrash(closetId) {
+    return removeClosetById(closetId)
+}
+
 export {
+    createCloset,
     showAllClosets,
     showOneCloset,
     saveLookOnCloset,
+    moveClosetToTrash
 
 }
 

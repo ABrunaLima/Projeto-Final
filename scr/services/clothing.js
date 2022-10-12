@@ -11,7 +11,7 @@ async function pullCloth(path_to_image, color_clothing, type, slot) {
         path_to_image,
         color_clothing,
         type,
-        slot
+        slot //top, bottom, shoes
     })
     //todos os slots começam inicialmente com false
     return cloth
