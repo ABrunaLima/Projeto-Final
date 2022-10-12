@@ -2,19 +2,18 @@ import {
     insertClothing,
     getAllClothing,
     getClothingById,
-    insertClothingToLook
 } from "../data/clothing";
 
 
 //adicionar uma roupa a base de dados
-async function pullCloth(idCloth, path_to_image, color_clothing, type, slot) {
+async function pullCloth(path_to_image, color_clothing, type, slot) {
     const cloth = await insertClothing({
-        idCloth,
         path_to_image,
         color_clothing,
         type,
         slot
     })
+    //todos os slots começam inicialmente com false
     return cloth
 }
 
@@ -36,28 +35,11 @@ async function pushOneCloth(idCloth) {
     return clothOne
 }
 
-async function createLook(look, userId) {
-
-    //se o look tiver ao menos duas peças de roupa, podera ser salvo
-    if (Object.keys(look).length > 2) {
-        const look = insertClothingToLook(look, userId)
-
-        // if (Object.keys(look).filter(ele => ele != undefined) > 2) {
-        //     return (
-        //         look,
-        //         true
-        //     )
-        // } else {
-        //     return false
-        // }
-    }
-}
 
 
 export {
     pullCloth,
     pushAllClothes,
-    pushOneCloth,
-    createLook
+    pushOneCloth
 }
 

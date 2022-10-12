@@ -33,5 +33,6 @@ async function checkIfEmailExists(userEmail) {
 export {
     getUserByEmail,
     addUser,
-    checkIfEmailExists
+    checkIfEmailExists,
+    getUserById
 }

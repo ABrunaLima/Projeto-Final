@@ -8,50 +8,45 @@ const COLLECTION_NAME = "closet"
 //CLOSET
 //////////////////////////////////////////////////////////////
 
-
-//armazenar um look no closet
-async function insertLookToCloset(look) {
+//adicionar um closet
+async function insertNewCloset(closet) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return (await collection.insertOne(look)).insertedId
-
+    return (await collection.insertOne(closet)).insertedId
 }
 
-//inserir roupa a um look
-async function insertClothingToLook(look, userId) {
+//Retorna o maior id existente num closet
+async function getMaxClosetId() {
+    const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
+    return await collection.find().sort({ idx: -1 }).limit(1)
+}
+
+//inserir o look ao closet
+async function insertLookToCloset(lookId, userId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
     //adicionar roupa que tenha um id existente
     return await collection.updateOne(
         { userId: userId },
-        { $set: look },
+        { $push: { look: { lookId } } },
         { upserted: true }
     )
 }
 
-//mostrar todos os looks armazenados
-async function getCloset() {
+//mostrar todos os closets armazenados
+async function getClosets() {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
     return await collection.find().toArray()
 
 }
 
-//mostra look armazenada através do Id
-async function getLookById(lookId) {
+async function getLooksOnEspecificClosetById(closetId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.findOne({ _idLook: ObjectId(lookId) })
-
-}
-
-//remover look do closet por Id
-async function removeLookById(lookId) {
-    const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.deleteOne({ _idLook: ObjectId(lookId) })
-
+    return await collection.findOne({ _id: closetId }).toArray()
 }
 
 export {
+    insertNewCloset,
     insertLookToCloset,
-    getCloset,
-    getLookById,
-    removeLookById,
-    insertClothingToLook
+    getClosets,
+    getLooksOnEspecificClosetById,
+    getMaxClosetId
 }

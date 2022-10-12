@@ -1,47 +1,52 @@
 
+import { cloneElement } from "react";
 import {
+    insertNewCloset,
     insertLookToCloset,
-    getCloset,
-    getLookById,
-    removeLookById
+    getClosets,
+    getLooksOnEspecificClosetById,
+    getMaxClosetId
 } from "../data/closet";
 
-import { createLook } from "./clothing";
 
+//Recebe um argumento que e um array de ids de looks
+async function createCloset(looks, title, userId) {
+    const maxId = await getMaxClosetId()
 
-async function saveLookOnCloset() {
-
-    //insertLookToCloset
-    //createLook
-
+    const closetId = insertNewCloset({
+        closet: looks,
+        title: title,
+        userId: userId,
+        idx: maxId + 1
+    })
+    return closetId
 }
 
-async function showCloset() {
-    const looks = await getCloset()
-    if (looks == undefined) {
-        return "Nenhuma roupa disponível"
+//salvar o token e o id do look no closet correspondente
+async function saveLookOnCloset(lookId, userId) {
+    const savedLook = await insertLookToCloset(lookId, userId)
+    return savedLook
+}
+
+
+async function showOneCloset(closetId) {
+    const closet = await getLooksOnEspecificClosetById(closetId)
+    if (closet == null) {
+        return "Closet não encontrado!!!!!!"
     }
-    return looks
+    return closet
 }
 
-async function pushOneLook(idLook) {
-    const LookOne = getClothingById(idLook)
-    if (clothOne === undefined) {
-        return "código inexistente"
-    }
-    return LookOne
+async function showAllClosets() {
+    const closets = await getClosets()
+    return closets
 }
-
-async function moveLookToTrash(idLook) {
-    return removeLookById(idLook)
-}
-
 
 export {
+    showAllClosets,
+    showOneCloset,
     saveLookOnCloset,
-    showCloset,
-    pushOneLook,
-    moveLookToTrash
+
 }
 
 
