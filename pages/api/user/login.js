@@ -1,46 +1,27 @@
-
-
-
-import {
-    checkIfEmailExists, valideUser, findUserByToken
-} from "../../../scr/data/users"
-
+import { valideUser } from "../../../scr/services/users"
+import { newToken } from "../../../scr/services/sessions"
 
 export default async function handler(req, res) {
-    if (req.method === "GET") {
+    if (req.method === "POST") {
 
         const {
             email
         } = req.body
 
-        console.log(email)
 
-        const userByUsername = await getUserByUsername(usernameOrEmail)
-        const userByEmail = await getUserByEmail(usernameOrEmail)
-        let user = null
-
-        if (!userByEmail && !userByUsername) {
-            return res
-                .status(404)
-                .json({
-                    "message": "O utilizador não foi encontrado!"
-                })
-        }
-        if (!userByEmail)
-            user = userByUsername
-        else
-            user = userByEmail
-
-        if (user.password !== password) {
-            return res
-                .status(401)
-                .json({
-                    "message": "A password introduzida é inválida!"
-                })
+        const user = await valideUser(email)
+        console.log(user)
+        if (user.email == "MM@gmail.com") {
+            res.status(200).json(user.username)
         }
 
-        const token = await addSession(user._id)
+        const token = await newToken(user._id)
         res.status(200)
             .json({ token })
     }
 }
+
+/*
+
+
+*/
