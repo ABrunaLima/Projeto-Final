@@ -18,13 +18,14 @@ import { ObjectId } from "mongodb";
 }
 */
 
+//o array será recebido pelo frontend!!
 
 async function createNewLook(clothesIds) {
     //looks só podem ser criados se tiverem no minimo 2 slots de roupa preenchidos
     const clothes = clothesIds.map(async id => await getClothingById(ObjectId(id)))
-
-
     //clothes[0].slot
+
+
 
     //verifica com o reduce se existe valores com a mesma posição, se sim, o look não pode ser criado.
     const verificaDiferentes = clothes.reduce(function (allClothes, cloth) {
@@ -36,6 +37,7 @@ async function createNewLook(clothesIds) {
 
     })
 
+    //se o tipo os slots forem diferentes e o array tiver mais de dois elementos, o look é criado
     if (verificaDiferentes && clothes.length > 1) {
         const look = insertNewLook({
             look: clothes

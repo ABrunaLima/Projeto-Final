@@ -19,7 +19,7 @@ async function insertClothing(cloth) {
 //mostra a roupa armazenada através do Id
 async function getClothingById(clothId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.findOne({ _idCloth: new ObjectId(clothId) })
+    return await collection.findOne({ _idCloth: ObjectId(clothId) })
 
 }
 

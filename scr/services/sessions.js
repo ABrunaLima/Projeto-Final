@@ -3,12 +3,14 @@ import {
     getSessionByToken
 } from "../data/sessions";
 
-async function newSession(userId) {
+//Criar um token
+async function newToken(userId) {
     const sessao = addSession(userId)
     return sessao
 
 }
 
+//verificar qual a corrêspondencia do token definido
 async function travelWithToken(token) {
     const token = getSessionByToken(token)
     return token
@@ -16,6 +18,6 @@ async function travelWithToken(token) {
 }
 
 export {
-    newSession,
+    newToken,
     travelWithToken
 }
