@@ -22,7 +22,7 @@ async function newUser(email, username) {
     return user
 }
 
-//verificar se existe algum usuário com o email inserido
+//verificar se existe algum usuário com o email inserido e retorna o usuario
 async function valideUser(email) {
     const user = await getUserByEmail(email)
     return user !== null
