@@ -15,8 +15,28 @@ export default function BotoesClose() {
                         <button>Look 5</button>
                         <button>Look 6</button>
                     </div>
+                    <div style={{ height: "700px", width: "590px" }}>
+                        <Look
+                        //top={"id" = "6346a03aa06125c61f4a0a4a"} mid={"id" = "6346a03acc6f3ed8b024e223"} bottom={"id" = "6346a03a6cb094b8b89191f4"}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
     )
+}
+
+function Look() {
+    return <div>
+        <div className={styles.top}>
+            <img src="/images/roupas/camisola bege.png" />
+        </div>
+        <div className={styles.mid}>
+            <img src="/images/roupas/calca cinza ganga.png" />
+        </div>
+        <div className={styles.bottom}>
+            <img src="/images/roupas/teni creme.png" />
+        </div>
+
+    </div>
 }
