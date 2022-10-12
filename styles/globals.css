@@ -7,10 +7,10 @@ body {
   font-family: 'Noto Sans', sans-serif;
 
 
-    --roxo: #f49cff;
-    --roxo-escuro: #811BE7;
-    --vermelho: #E40030;
-    --bege: #F0BBD1;
+  --roxo: #f49cff;
+  --roxo-escuro: #811BE7;
+  --vermelho: #E40030;
+  --bege: #F0BBD1;
 }
 
 a {

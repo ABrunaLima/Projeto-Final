@@ -1,0 +1,62 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 30vw;
+
+}
+
+.carrosel{
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+
+}
+
+.item{
+    margin: 10px;
+    padding: 10px;
+    width: 280px;
+    flex: none;
+}
+
+.imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info span{
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.2rem;
+    margin: 10px;
+    color:black;
+}
+.botoes{
+    width: 100%;
+    text-align: center;
+}
+
+.botoes img{
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+}
+
+.botoes button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.botoes button:first-child img{
+    transform: rotate(180deg);
+}

@@ -28,18 +28,31 @@ const closets = [
         id: "5",
         imagePath: "camisaSocialpreta.png",
         title: "Closet 5"
+    },
+    {
+        id: "4",
+        imagePath: "camisaDoFlamengo.png",
+        title: "Closet 4"
+    },
+    {
+        id: "5",
+        imagePath: "camisaSocialpreta.png",
+        title: "Closet 5"
+    },
+    {
+        id: "4",
+        imagePath: "camisaDoFlamengo.png",
+        title: "Closet 4"
+    },
+    {
+        id: "5",
+        imagePath: "camisaSocialpreta.png",
+        title: "Closet 5"
     }
+
 ]
 
 export default function closet() {
-
-    function getClosets(id, imagePath, title) {
-
-        closets.map(getClosets)
-        console.log("hello")
-
-    }
-
 
     return (
         //**************************************************************************************************************
@@ -52,8 +65,9 @@ export default function closet() {
                 <div>
                     <div className={styles.closet}>
                         <div className={styles.title}>
-                            <h2 className={styles.h2}>Closets</h2>
+                            <h2>Closets</h2>
                         </div>
+
                         {/* <CDropdown /> */}
 
                         {/* ------------------------------------------------------------------------------------------------ */}
@@ -74,8 +88,20 @@ export default function closet() {
                         <section>
 
                             <div className={styles.lookEachArea}>
+                                {closets.map(closet => (
+                                    <div>
+                                        <span className={styles.tituloDiv}>{closet.title}</span>
+                                        <div key={closet.id} className={styles.area}>
 
-                                <div className={styles.area}>
+                                            <div className={styles.imagem}>
+                                                <img src={closet.imagePath} />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                ))}
+
+                                {/* <div className={styles.area}>
 
                                     <div className={styles.imagem}>
                                         <img src="camisaDoFlamengo.png" />
@@ -97,13 +123,13 @@ export default function closet() {
                                         <img src="armadura.png" />
                                     </div>
 
-                                </div>
+                                </div> */}
 
                             </div>
 
                             {/* ------------------------------------------------------------------------------------------------ */}
 
-                            <div className={styles.lookEachArea}>
+                            {/* <div className={styles.lookEachArea}>
 
                                 <div className={styles.area}>
 
@@ -131,7 +157,7 @@ export default function closet() {
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> */}
                         </section>
 
                         {/* ------------------------------------------------------------------------------------------------ */}
