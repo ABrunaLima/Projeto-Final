@@ -11,13 +11,13 @@ async function newToken(userId) {
 }
 
 //verificar qual a corrêspondencia do token definido
-async function travelWithToken(token) {
-    const token = getSessionByToken(token)
-    return token
+async function findIdByToken(token) {
+    const id = getSessionByToken(token)
+    return id
 
 }
 
 export {
     newToken,
-    travelWithToken
+    findIdByToken
 }

@@ -43,11 +43,11 @@
 
     align-items: center;
     /* background-color: red; */
-    /* border: 5px black; */
+    /* border: 5px dotted black; */
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    height: 25vh;
+    gap: 50px;
+    height: 30vh;
     text-align: center;
     margin-top: 15px;
     width: 45vw;
@@ -56,10 +56,32 @@
 
 .area {
 
+    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.3); */
     border: 5px solid black;
     height: 230px;
     width: 100vw;
 
+}
+
+.tituloDiv {
+
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+
+}
+
+.imagem {
+
+    background-size: cover;
+    display: flex;
+    height: 15vh;
+    width: 10vw;
+    justify-content: center;
+    margin-top: 45px;
+    margin-left: 25px;
 
 }
 
