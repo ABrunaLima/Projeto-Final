@@ -16,7 +16,6 @@ export function NavBar() {
         }
     ]
 
-
     return (
         <div>
             <nav className={styles.nav}>
