@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import closet from '../../pages/closet'
 
 
-export function NavBar() {
+export function NavBarSearch() {
     const navItems = [
         {
             label: "Home",
@@ -23,8 +23,14 @@ export function NavBar() {
                 <div className={styles.marca}>
                     <img src="/images/LogoPreto.png" />
                 </div>
-                <div>
-                    //coloca aqui a search bar
+
+                <div className={styles.searchBar}>
+                    <div className={styles.search}>
+                        <div><img src='/lupa.png' /></div>
+                        <input type="text" placeholder="Search..." />
+
+
+                    </div>
                 </div>
                 <div className={styles.textos}>
                     {

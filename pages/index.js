@@ -4,6 +4,7 @@ import styles from '../styles/navbar.module.css'
 import styles2 from '../styles/index.module.css'
 import { NavBar } from '../scr/components/navbar'
 import { closet } from './closet'
+import { NavBarSearch } from '../scr/components/navBarSearch'
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
 
       <div className={styles2.fundo}>
 
-        <NavBar className={styles.navBar} />
+        <NavBarSearch />
 
       </div>
 
