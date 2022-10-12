@@ -29,13 +29,13 @@ export default function BotoesClose() {
 function Look() {
     return <div>
         <div className={styles.top}>
-            <img src="/images/roupas/camisola bege.png" />
+            <img src="/images/roupas/camisolaBege.png" />
         </div>
         <div className={styles.mid}>
-            <img src="/images/roupas/calca cinza ganga.png" />
+            <img src="/images/roupas/calcasCinzaGanga.png" />
         </div>
         <div className={styles.bottom}>
-            <img src="/images/roupas/teni creme.png" />
+            <img src="/images/roupas/tenisCreme.png" />
         </div>
 
     </div>

@@ -1,16 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from '../../styles/carrosel.module.css'
 
+const closet =  [
+  
+]
 
 export function Carrosel() {
     const roupas = [
         {
-            "id": "6346a03aa06125c61f4a0a4a",
-            "pathToImage": "armadura.png",
-            "title": "Armor",
+            "id": "1",
+            "pathToImage": "blazerRoxo.png",
+            "title": "Purple Blazer",
             "slot": "top",
-            "type": "sweater",
-            "color": "brown"
+            "type": "Blazer",
+            "color": "Purple"
         },
         {
             "id": "6346a03acc6f3ed8b024e223",
@@ -62,12 +65,14 @@ export function Carrosel() {
 
     const handleLeftClick = (e) => {
         e.preventDefault()
+        console.log("LEFT")
         carrosel.current.scrollLeft -= carrosel.current.offsetWidth
         
     }
     const handleRightClick = (e) => {
+        console.log("RIGHT")
         e.preventDefault()
-        carrosel.current.scrollRight += carrosel.current.offsetWidth
+        carrosel.current.scrollLeft += carrosel.current.offsetWidth
         
     }
 

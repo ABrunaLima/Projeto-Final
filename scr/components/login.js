@@ -7,7 +7,7 @@ export function Login() {
     }
     return (
         <div>
-            <div class={styles.botaoLogin}><button onClick={() => ""}><img src="/login.png" /></button></div>
+            <div className={styles.botaoLogin}><button onClick={() => ""}><img src="/login.png" /></button></div>
         </div>
     )
 }
