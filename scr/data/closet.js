@@ -40,7 +40,13 @@ async function getClosets() {
 
 async function getLooksOnEspecificClosetById(closetId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.findOne({ _id: closetId }).toArray()
+    return await collection.findOne({ _id: ObjectId(closetId) }).toArray()
+}
+
+//remover closet por Id
+async function removeClosetById(closetId) {
+    const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
+    return await collection.delete({ _idCloset: ObjectId(closetId) })
 }
 
 export {
@@ -48,5 +54,6 @@ export {
     insertLookToCloset,
     getClosets,
     getLooksOnEspecificClosetById,
-    getMaxClosetId
+    getMaxClosetId,
+    removeClosetById
 }

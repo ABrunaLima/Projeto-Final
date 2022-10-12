@@ -21,16 +21,21 @@ export default function closet() {
     return (
         //**************************************************************************************************************
         <div>
-            <NavBar />
-            <div className={styles.closet}>
-                <div className={styles.title} for="titulo-da-pagina">
-                    <h2 className={styles.h2}>Closets</h2>
+            <div>
+                <div>
+                    <NavBar />
                 </div>
-                {/* <CDropdown /> */}
 
-                {/* ------------------------------------------------------------------------------------------------ */}
+                <div className={styles.fundoCloset}>
+                    <div className={styles.closet}>
+                        <div className={styles.title} for="titulo-da-pagina">
+                            <h2 className={styles.h2}>Closets</h2>
+                        </div>
+                        {/* <CDropdown /> */}
 
-                {/* <section for="botao-escolher-closet">
+                        {/* ------------------------------------------------------------------------------------------------ */}
+
+                        {/* <section for="botao-escolher-closet">
                     <div className={dropDownButton.dropdown}>
                         <button onClick={dropDownButton} className={styles2.dropbtn}>Escolher Closet</button>
                         <div id="myDropdown" className={styles2.dropdownContent}>
@@ -41,23 +46,25 @@ export default function closet() {
                     </div>
                 </section> */}
 
-                {/* ------------------------------------------------------------------------------------------------ */}
+                        {/* ------------------------------------------------------------------------------------------------ */}
 
-                <section for="area-do-look">
-                    <div className={styles.lookEachArea}>
-                        <div className={styles.area}></div>
-                        <div className={styles.area}></div>
-                        <div className={styles.area}></div>
+                        <section for="area-do-look">
+                            <div className={styles.lookEachArea}>
+                                <div className={styles.area}></div>
+                                <div className={styles.area}></div>
+                                <div className={styles.area}></div>
+                            </div>
+
+                            <div className={styles.lookEachArea}>
+                                <div className={styles.area}></div>
+                                <div className={styles.area}></div>
+                                <div className={styles.area}></div>
+                            </div>
+                        </section>
+
+                        {/* ------------------------------------------------------------------------------------------------ */}
                     </div>
-
-                    <div className={styles.lookEachArea}>
-                        <div className={styles.area}></div>
-                        <div className={styles.area}></div>
-                        <div className={styles.area}></div>
-                    </div>
-                </section>
-
-                {/* ------------------------------------------------------------------------------------------------ */}
+                </div>
             </div>
         </div>
 
