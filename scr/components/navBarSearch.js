@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import closet from '../../pages/closet'
 
 
-export function NavBar() {
+export function NavBarSearch() {
     const navItems = [
         {
             label: "Home",
