@@ -4,15 +4,52 @@
 
 ## LISTA DE APIs ATUAL
 
-1. - API que carrega o closet;
-2. - API que adiciona roupa ao LOOK;
-3. - API que devolva as peças de roupa através do ID;
-4. - API que devolva todas as peças de roupa;
-5. - API do LOGIN;
-6. - API que adicione um LOOK ao CLOSET;
-7. - API que devolve um LOOK através do ID;
+-------------USER---------------
 
-(atualizar caso hajam mais APIs necessárias)
+1. - API criar usuário
+POST: api/user/
+
+2. - API do LOGIN (verifica email e retorna um token + username);
+GET: api/user/signup
+
+--------------------------------
+
+###VERIFICAR O TAL DO POPULATE###
+-----------CLOTHING-------------
+
+1. - API que devolva as peças de roupa através do ID;
+
+2. - API que devolva todas as peças de roupa;
+
+--------------------------------
+
+--------------LOOK--------------
+
+1. - API que edita informações de um look específico
+    (DELETE, POST, GET, PATCH)
+
+2. - API que cria um look;
+
+2. - API que cria um look;
+
+3. - API que retorna todos os looks;
+
+--------------------------------
+
+------------CLOSET-------------
+
+1. - API que edita informações de um closet específico
+    (DELETE, POST, GET, PATCH)
+
+2. - API que cria um closet
+
+3. - API que carrega todos os closets;
+
+4. - API que adicione um LOOK ao CLOSET;
+
+--------------------------------
+
+
 
 ---
 
@@ -34,7 +71,7 @@ Deve ser possível:
 
      . criar - criar um closet (não é obrigatório ter looks dentro de um closet para ele existir)
 
-CAMINHO ---> GET/api/closet
+CAMINHO ---> GET/api/closet/:id
  
  ---
 
