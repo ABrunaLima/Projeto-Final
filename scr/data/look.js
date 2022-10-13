@@ -26,7 +26,8 @@ async function updateClothingToLook(lookId, clothId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
     return await collection.updateOne(
         { _id: lookId },
-        { $set: { cloth: { clothId } } }
+        { $set: { cloth: { clothId } } },
+        { upserted: true }
     )
 }
 

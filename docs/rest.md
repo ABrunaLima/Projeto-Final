@@ -6,10 +6,10 @@
 
 -------------USER---------------
 
-1. - API criar usuário
+1. - API criar usuário (x)
 POST: api/user/signup
 
-2. - API do LOGIN (verifica email e retorna um token + username);
+2. - API do LOGIN (username)(Marta Maria)(x)
 POST: api/user/login
 
 --------------------------------

@@ -24,15 +24,15 @@ async function createCloset(looks, title, userId) {
 }
 
 //salvar o token e o id do look no closet correspondente
-async function saveLookOnCloset(lookId, userId) {
-    const savedLook = await insertLookToCloset(lookId, userId)
+async function saveLookOnCloset(lookId, closetId) {
+    const savedLook = await insertLookToCloset(lookId, closetId)
     return savedLook
 }
 
 //mostrar todos os looks de um closet
 async function showOneCloset(closetId) {
     const closet = await getAClosetById(closetId)
-    return closet
+    return closet.closet
 
 }
 

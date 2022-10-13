@@ -21,6 +21,8 @@ import { ObjectId } from "mongodb";
 //o array será recebido pelo frontend!!
 async function createNewLook(clothesIds) {
     //looks só podem ser criados se tiverem no minimo 2 slots de roupa preenchidos
+
+    //Identifica as roupas de um look
     const clothes = clothesIds.map(async id => await getClothingById(ObjectId(id)))
     //clothes[0].slot
 
@@ -81,10 +83,10 @@ async function insertClothOnLook(lookId, clothId) {
 }
 
 
-//adicionar um look ao closet
-async function pushOneLook(idLook) {
+// mostra um look armazenado atraves do seu id
+async function showOneLook(idLook) {
     const lookOne = getLookById(idLook)
-    if (clothOne === undefined) {
+    if (lookOne === undefined) {
         return "código inexistente"
     }
     return lookOne
@@ -99,6 +101,6 @@ async function moveLookToTrash(idLook) {
 export {
     createNewLook,
     insertClothOnLook,
-    pushOneLook,
+    showOneLook,
     moveLookToTrash
 }
