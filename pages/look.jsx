@@ -9,19 +9,33 @@ import { useState } from 'react'
 import { Look } from './mycloset'
 
 export default function LookPage() {
-    const[roupaFiltrada, setRoupaFiltrada] = useState(Roupas)
-    const[lookAtual, setLookAtual] = useState(Roupas)
-    
+    const [roupaFiltrada, setRoupaFiltrada] = useState(Roupas)
+    const [lookAtual, setLookAtual] = useState({})
+
+
+    console.log(lookAtual)
+
+    const alterarLook = (item) => {
+        
+        setLookAtual(prevLook => ({...prevLook, [item.slot]: item}))
+        
+    }
     return (
 
         <div>
-                <NavBarSearch />
+            <NavBarSearch />
             <div className={styles.linhaDoCarrossel}>
                 <div />
                 <div />
-                <Filtro setData={setRoupaFiltrada}/>
-                <Look />
-                <Carrosel data={roupaFiltrada}/>
+                <Filtro setData={setRoupaFiltrada} />
+                <Look
+                    top={lookAtual.top}
+                    middle={lookAtual.middle}
+                    bottom={lookAtual.bottom}
+                />
+                <Carrosel
+                    data={roupaFiltrada}
+                    onEscolherLook={alterarLook} />
             </div>
         </div>
 

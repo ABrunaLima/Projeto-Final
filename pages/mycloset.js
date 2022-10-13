@@ -1,5 +1,6 @@
 import { NavBarSearch } from "../scr/components/navBarSearch"
 import styles from "../styles/mycloset.module.css"
+
 const top = {
     "id": "1",
     "pathToImage": "/images/roupas/blazerRoxo.png",
@@ -43,7 +44,7 @@ export default function BotoesClose() {
                         <button>Look 6</button>
                     </div>
                     <div style={{ height: "700px", width: "590px" }}>
-                        <Look1
+                        <Look
                             top={top}
                             middle={middle}
                             bottom={bottom}
@@ -55,7 +56,8 @@ export default function BotoesClose() {
     )
 }
 
-function Look1({ top, bottom, middle }) {
+export function Look({ top = {}, bottom = {}, middle = {} }) {
+    console.log(top, middle, bottom)
     return <div>
         <div className={styles.top}>
             <img src={top.pathToImage} />

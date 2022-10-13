@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import styles from '../../styles/carrosel.module.css'
 import { Roupas } from '../assets/roupas'
 
-export function Carrosel({data}) {
+export function Carrosel({data, onEscolherLook}) {
     const carrosel = useRef(null)
 
     if (!data || !data.length) return null
@@ -25,7 +25,7 @@ export function Carrosel({data}) {
                     return (
                         <div className={styles.item} key={id}>
                             <div className={styles.imagem}>
-                                <img src={pathToImage} alt={title} />
+                                <img onClick={() => onEscolherLook(item)} src={pathToImage} alt={title} />
                             </div>
                             <div className={styles.info}>
                                 <span className={styles.titulo}>{title}</span>
