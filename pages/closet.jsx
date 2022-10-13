@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import styles from '../styles/Closet.module.css'
 import { NavBar } from '../scr/components/navbar'
+import BotoesClose from './mycloset'
 
 //teste PILOTO
 const closets = [
@@ -54,6 +55,9 @@ const closets = [
 
 export default function closet() {
 
+    const router = useRouter()
+
+
     return (
         //**************************************************************************************************************
         <div>
@@ -92,11 +96,12 @@ export default function closet() {
                                     <div>
                                         <span className={styles.tituloDiv}>{closet.title}</span>
                                         <div key={closet.id} className={styles.area}>
-
+                                            <button onClick={() => router.push('/mycloset')}>
+                                                Start
+                                            </button>
                                             <div className={styles.imagem}>
                                                 <img src={closet.imagePath} />
                                             </div>
-
                                         </div>
                                     </div>
                                 ))}
