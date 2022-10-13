@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from '../../styles/carrosel.module.css'
-import { Roupas } from './roupas'
+import { Roupas } from '../assets/roupas'
 
-export function Carrosel() {
-    const [data, setData] = useState(Roupas)
+export function Carrosel({data}) {
     const carrosel = useRef(null)
 
     if (!data || !data.length) return null
@@ -22,7 +21,7 @@ export function Carrosel() {
         <div className={styles.container}>
             <div className={styles.carrosel} ref={carrosel}>
                 {data.map((item) => {
-                    const { id, title, pathToImage } = item
+                    const { id, title, pathToImage, slot } = item
                     return (
                         <div className={styles.item} key={id}>
                             <div className={styles.imagem}>
