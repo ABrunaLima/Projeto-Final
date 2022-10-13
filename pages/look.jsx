@@ -8,6 +8,7 @@ import { Roupas } from '../scr/components/roupas'
 import { useState } from 'react'
 
 export default function Look() {
+    const[roupaFiltrada, setRoupaFiltrada] = useState(Roupas)
     return (
 
         <div>
@@ -15,8 +16,8 @@ export default function Look() {
             <div className={styles.linhaDoCarrossel}>
                 <div />
                 <div />
-                <Filtro />
-                <Carrosel />
+                <Filtro setData={setRoupaFiltrada}/>
+                <Carrosel data={roupaFiltrada}/>
             </div>
         </div>
 
