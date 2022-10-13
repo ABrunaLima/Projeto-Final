@@ -1,5 +1,32 @@
 import { NavBarSearch } from "../scr/components/navBarSearch"
-import styles from "../styles/divs.module.css"
+import styles from "../styles/mycloset.module.css"
+const top = {
+    "id": "1",
+    "pathToImage": "/images/roupas/blazerRoxo.png",
+    "title": "Purple Blazer",
+    "slot": "top",
+    "type": "blazer",
+    "color": "purple"
+}
+
+const bottom = {
+    "id": "2",
+    "pathToImage": "/images/roupas/tenisCreme.png",
+    "title": "Pink Shoes",
+    "slot": "bottom",
+    "type": "shoes",
+    "color": "pink"
+}
+
+const middle = {
+    "id": "4",
+    "pathToImage": "/images/roupas/calcasAzuisGanga1.png",
+    "title": "Blue Jeans",
+    "slot": "middle",
+    "type": "pants",
+    "color": "blue"
+}
+
 export default function BotoesClose() {
 
     return (
@@ -16,8 +43,10 @@ export default function BotoesClose() {
                         <button>Look 6</button>
                     </div>
                     <div style={{ height: "700px", width: "590px" }}>
-                        <Look
-                        //top={"id" = "6346a03aa06125c61f4a0a4a"} mid={"id" = "6346a03acc6f3ed8b024e223"} bottom={"id" = "6346a03a6cb094b8b89191f4"}
+                        <Look1
+                            top={top}
+                            middle={middle}
+                            bottom={bottom}
                         />
                     </div>
                 </div>
@@ -26,16 +55,16 @@ export default function BotoesClose() {
     )
 }
 
-function Look() {
+function Look1({ top, bottom, middle }) {
     return <div>
         <div className={styles.top}>
-            <img src="/images/roupas/camisolaBege.png" />
+            <img src={top.pathToImage} />
         </div>
-        <div className={styles.mid}>
-            <img src="/images/roupas/calcasCinzaGanga.png" />
+        <div className={styles.middle}>
+            <img src={middle.pathToImage} />
         </div>
         <div className={styles.bottom}>
-            <img src="/images/roupas/tenisCreme.png" />
+            <img src={bottom.pathToImage} />
         </div>
 
     </div>

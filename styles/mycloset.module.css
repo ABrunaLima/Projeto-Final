@@ -1,8 +1,12 @@
 .pagina {
-    background-image: url("../public/images/minimlaista-wallpaper.jpg.webp");
-    background-size: cover;
+    /* background-image: url("../public/images/minimlaista-wallpaper.jpg.webp");
+    */
+
+
+    background-color: rgba(255, 192, 203, 0.328);
+    background-size: contain;
     width: 100vw;
-    height: calc(100vh - 120px);
+    height: 190%;
 }
 
 .botoes {
@@ -35,51 +39,57 @@
 
 .borda {
     display: flex;
-    background-color: rgba(128, 128, 128, 0.244);
+    background-color: rgba(128, 128, 128, 0.034);
     height: 700px;
     width: 700px;
-    border: 2px solid black;
+    border: 0.5px solid rgba(0, 0, 0, 0.034);
 
 }
 
 .top {
     height: 250px;
     width: 590;
-    border: 2px solid black;
+    border: 0.5px solid rgba(0, 0, 0, 0.034);
 }
 
-.mid {
+.middle {
     height: 325px;
     width: 590;
-    border: 2px solid black;
+    border: 0.5px solid rgba(0, 0, 0, 0.034);
 }
 
 .bottom {
     height: 125px;
     width: 590;
-    border: 2px solid black;
+    border: 0.5px solid rgba(0, 0, 0, 0.034);
 }
 
 .top img {
     width: 300px;
     height: 300px;
     justify-content: flex;
-    margin-left: 25%;
-    margin-top: -5%;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%)
 }
 
-.mid img {
+.middle img {
     width: 300px;
     height: 400px;
     justify-content: flex;
-    margin-left: 25%;
-    margin-top: -5%;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%)
 }
 
 .bottom img {
     width: 200px;
     height: 200px;
     justify-content: flex;
-    margin-left: 35%;
-    margin-top: -10%;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%)
 }
