@@ -70,5 +70,5 @@ export {
     getMaxClosetId,
     removeClosetById,
     removeOneLookFromClosetById,
-    getALookFromClosetById
+    // getALookFromClosetById
 }

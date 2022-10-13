@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from '../../styles/carrosel.module.css'
-import { Roupas } from './roupas'
+import { Roupas } from '../assets/roupas'
 
 export function Carrosel({data}) {
     const carrosel = useRef(null)
