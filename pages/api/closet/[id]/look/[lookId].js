@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb"
-import { moveLookOfClosetToTrash, saveLookOnCloset, showOneCloset } from "../../../../../scr/services/closet"
+import { moveLookOfClosetToTrash, saveLookOnCloset, showLooksOnCloset, showOneCloset } from "../../../../../scr/services/closet"
 import { moveLookToTrash, showOneLook } from "../../../../../scr/services/look"
 
 export default async function handler(req, res) {
@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         const lookId = req.query.lookId
 
         //PEGA O ARRAY DE LOOK DO CLOSET
-        const closet = await showOneCloset(id)
+        const closet = await showLooksOnCloset(id)
 
 
         //VERIFICA SE ID DO LOOK EXISTE NO ARRAY DO CLOSET
@@ -44,7 +44,7 @@ export default async function handler(req, res) {
         const lookId = req.query.lookId
 
         //PEGA O ARRAY DE LOOK DO CLOSET
-        const closet = await showOneCloset(id)
+        const closet = await showLooksOnCloset(id)
 
         //VERIFICA SE O LOOK EXISTE NO ARRAY DO CLOSET
         const look = JSON.parse(closet).some(ele => ele == lookId)
@@ -70,7 +70,7 @@ export default async function handler(req, res) {
         const lookId = req.query.lookId
 
         //PEGA O ARRAY DE LOOK DO CLOSET
-        const closet = await showOneCloset(id)
+        const closet = await showLooksOnCloset(id)
 
         //VERIFICA SE O LOOK EXISTE NO ARRAY DO CLOSET
         const look = JSON.parse(closet).some(ele => ele == lookId)

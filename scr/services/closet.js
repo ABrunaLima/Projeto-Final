@@ -30,10 +30,16 @@ async function saveLookOnCloset(lookId, closetId) {
 }
 
 //mostrar todos os looks de um closet
-async function showOneCloset(closetId) {
+async function showLooksOnCloset(closetId) {
     const closet = await getAClosetById(closetId)
     return closet.closet
 
+}
+
+//retorna um closet especifico
+async function showOneCloset(closetId) {
+    const closet = await getAClosetById(closetId)
+    return closet
 }
 
 
@@ -60,8 +66,8 @@ export {
     showOneCloset,
     saveLookOnCloset,
     moveClosetToTrash,
-    moveLookOfClosetToTrash
-
+    moveLookOfClosetToTrash,
+    showLooksOnCloset
 }
 
 

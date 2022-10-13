@@ -1,4 +1,4 @@
-import { moveClosetToTrash, showOneCloset } from "../../../../scr/services/closet"
+import { moveClosetToTrash, showLooksOnCloset, showOneCloset } from "../../../../scr/services/closet"
 
 
 export default async function handler(req, res) {
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     if (req.method === "GET") {
         const id = req.query.id
 
-        const closet = await showOneCloset(id)
+        const closet = await showLooksOnCloset(id)
         console.log(closet, id)
         if (closet != null) {
             res.status(200).json(closet)
