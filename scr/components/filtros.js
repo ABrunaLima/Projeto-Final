@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Roupas } from "./roupas";
+import { Roupas } from "../assets/roupas";
 import styles from '../../styles/filtros.module.css'
 
 export function Filtro({ data, setData }) {

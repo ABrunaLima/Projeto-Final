@@ -1,6 +1,8 @@
 import { NavBarSearch } from "../scr/components/navBarSearch"
 import styles from "../styles/mycloset.module.css"
-export default function BotoesClose() {
+
+
+export default function BotoesCloset() {
 
     return (
         <div className={styles.pagina}>
@@ -26,7 +28,7 @@ export default function BotoesClose() {
     )
 }
 
-function Look() {
+export function Look() {
     return <div>
         <div className={styles.top}>
             <img src="/images/roupas/camisolaBege.png" />
