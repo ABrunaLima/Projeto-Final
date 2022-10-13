@@ -7,7 +7,7 @@ import styles from '../styles/initialPage.module.css'
 
 export default function Home() {
   const router = useRouter()
-  
+
   return (
     <div className={styles.container}>
       <NavBar />

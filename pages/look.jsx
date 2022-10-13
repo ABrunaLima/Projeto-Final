@@ -15,10 +15,23 @@ export default function LookPage() {
 
     console.log(lookAtual)
 
+
+
+    const saveLook = () => {
+        fetch("/api/look", {
+            method: "POST",
+            headers: {
+                "Content-Type": "app",
+                "authorization": localStorage.getItem("token")
+            },
+            body: JSON.stringify(lookAtual)
+
+        })
+    }
     const alterarLook = (item) => {
-        
-        setLookAtual(prevLook => ({...prevLook, [item.slot]: item}))
-        
+
+        setLookAtual(prevLook => ({ ...prevLook, [item.slot]: item }))
+
     }
     return (
 
@@ -37,7 +50,8 @@ export default function LookPage() {
                     data={roupaFiltrada}
                     onEscolherLook={alterarLook} />
             </div>
-        </div>
+            <button onClick={(e) => saveLook()}>Guardar Look</button>
+        </div >
 
     )
 }
