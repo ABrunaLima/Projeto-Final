@@ -1,5 +1,5 @@
 import { NavBarSearch } from "../scr/components/navBarSearch"
-import styles from "../styles/divs.module.css"
+import styles from "../styles/mycloset.module.css"
 export default function BotoesClose() {
 
     return (
