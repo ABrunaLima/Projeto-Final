@@ -1,15 +1,65 @@
-.titulos{
+.titulos {
     color: black;
     font-size: 1.2rem;
     font-weight: 550;
-}
-.categorias{
-    display: flex;
-    
-}
-.categorias button{
-    border: none;
-    background-color: transparent;
-    font-size: 1rem;
+    position: relative;
+    left: 100px;
 
+}
+
+.tituloscores {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 550;
+    position: relative;
+    left: 100px;
+
+}
+
+.categorias {
+    display: flex;
+    background-color: aqua;
+    flex-direction: column;
+    height: 60px;
+
+}
+
+.categorias button {
+    border: none;
+    display: flex;
+    background-color: red;
+    font-size: 1rem;
+    height: 70px;
+
+}
+
+.fora {
+    background-color: aliceblue;
+    display: flex;
+    margin-left: -90%;
+
+
+    justify-content: space-between;
+}
+
+.cores {
+    display: flex;
+    background-color: rgba(255, 0, 208, 0);
+}
+
+.cores img {
+    height: 18px;
+    width: 18px;
+}
+
+.cores button {
+    background-color: transparent;
+    height: 18px;
+    width: 18px;
+    border: black solid 1px;
+}
+
+.divcores {
+    background-color: rgba(255, 255, 0, 0.265);
+    display: flex;
 }
