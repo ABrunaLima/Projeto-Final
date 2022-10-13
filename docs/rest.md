@@ -6,10 +6,10 @@
 
 -------------USER---------------
 
-1. - API criar usuário
+1. - API criar usuário (x)
 POST: api/user/signup
 
-2. - API do LOGIN (verifica email e retorna um token + username);
+2. - API do LOGIN (username)(Marta Maria)(x)
 POST: api/user/login
 
 --------------------------------
@@ -18,9 +18,19 @@ POST: api/user/login
 
 -----------CLOTHING------------- (easy)
 
-1. - API que devolva as peças de roupa através do ID;
+1. - API que envia roupas ao banco de dados (nao precisa)
+POST: api/clothing
 
-2. - API que devolva todas as peças de roupa;
+2. - API que devolva todas as peças de roupa; (x)
+GET: api/clothing
+
+1. - API que devolva as peças de roupa através do ID; (x)
+GET: api/clothing/:id
+
+3. - API que deleta roupas especificas(nao precisa)
+DELETE: api/clothing/:id
+
+
 
 --------------------------------
 
@@ -39,7 +49,7 @@ POST: api/user/login
 
 ------------CLOSET-------------
 
-1. - APIs que editam looks de um closet específico (doing)
+1. - APIs que editam looks de um closet específico (x)
     (DELETE, POST, GET)
     api/closet/look/:id
 
