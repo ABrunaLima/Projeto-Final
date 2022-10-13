@@ -6,19 +6,20 @@ import {
 
 
 //adicionar uma roupa a base de dados
-async function pullCloth(path_to_image, color_clothing, type, slot) {
+async function pullCloth(pathToImage, color, type, slot, title) {
     const cloth = await insertClothing({
-        path_to_image,
-        color_clothing,
+        pathToImage,
+        title,
+        slot, //top, bottom, shoes
         type,
-        slot //top, bottom, shoes
+        color
     })
     //todos os slots começam inicialmente com false
     return cloth
 }
 
 //mostrar todas as roupas armazenadas no sistema
-async function pushAllClothes() {
+async function showAllClothes() {
     const clothes = await getAllClothing()
     if (clothes == undefined) {
         return "Nenhuma roupa disponível"
@@ -27,10 +28,10 @@ async function pushAllClothes() {
 }
 
 //mostrar uma roupa com o id correspondente 
-async function pushOneCloth(idCloth) {
-    const clothOne = getClothingById(idCloth)
+async function showOneCloth(idCloth) {
+    const clothOne = await getClothingById(idCloth)
     if (clothOne === undefined) {
-        return "OPA! EMAIL ERRADO!"
+        return "Roupa não encontrada"
     }
     return clothOne
 }
@@ -39,7 +40,7 @@ async function pushOneCloth(idCloth) {
 
 export {
     pullCloth,
-    pushAllClothes,
-    pushOneCloth
+    showAllClothes,
+    showOneCloth
 }
 
