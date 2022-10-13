@@ -1,0 +1,15 @@
+.titulos{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+.categorias{
+    display: flex;
+
+}
+.categorias button{
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+
+}
