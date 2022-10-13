@@ -7,15 +7,16 @@
 -------------USER---------------
 
 1. - API criar usuário
-POST: api/user/
+POST: api/user/signup
 
 2. - API do LOGIN (verifica email e retorna um token + username);
-GET: api/user/signup
+POST: api/user/login
 
 --------------------------------
 
-###VERIFICAR O TAL DO POPULATE###
------------CLOTHING-------------
+###VERIFICAR O TAL DO POPULATE### (x)
+
+-----------CLOTHING------------- (easy)
 
 1. - API que devolva as peças de roupa através do ID;
 
@@ -23,7 +24,7 @@ GET: api/user/signup
 
 --------------------------------
 
---------------LOOK--------------
+--------------LOOK-------------- (hard, socorro)
 
 1. - API que edita informações de um look específico
     (DELETE, POST, GET, PATCH)
@@ -38,15 +39,21 @@ GET: api/user/signup
 
 ------------CLOSET-------------
 
-1. - API que edita informações de um closet específico
-    (DELETE, POST, GET, PATCH)
+1. - APIs que editam looks de um closet específico (doing)
+    (DELETE, POST, GET)
+    api/closet/look/:id
 
-2. - API que cria um closet
+2. - API que mostra toos os looks de um closet especifico (x)
+    GET: api/closet/:id
 
-3. - API que carrega todos os closets;
+2. - API que cria um closet (x)
+    POST: api/closet
 
-4. - API que adicione um LOOK ao CLOSET;
+3. - API que carrega todos os closets (x)
+    GET: api/closet
 
+4. - API que deleta um closet especifico (x)
+    DELETE: api/closet/:id
 --------------------------------
 
 

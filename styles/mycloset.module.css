@@ -8,7 +8,6 @@
 .botoes {
     display: flex;
     flex-direction: column;
-    margin-right: 90%;
     background-color: transparent;
     width: 110px;
 
@@ -29,7 +28,7 @@
 .botoes button {
     background-color: transparent;
     height: 500px;
-    width: 90px;
+    width: 110px;
     font-size: x-large;
 
 }
@@ -41,4 +40,46 @@
     width: 700px;
     border: 2px solid black;
 
+}
+
+.top {
+    height: 250px;
+    width: 590;
+    border: 2px solid black;
+}
+
+.mid {
+    height: 325px;
+    width: 590;
+    border: 2px solid black;
+}
+
+.bottom {
+    height: 125px;
+    width: 590;
+    border: 2px solid black;
+}
+
+.top img {
+    width: 300px;
+    height: 300px;
+    justify-content: flex;
+    margin-left: 25%;
+    margin-top: -5%;
+}
+
+.mid img {
+    width: 300px;
+    height: 400px;
+    justify-content: flex;
+    margin-left: 25%;
+    margin-top: -5%;
+}
+
+.bottom img {
+    width: 200px;
+    height: 200px;
+    justify-content: flex;
+    margin-left: 35%;
+    margin-top: -10%;
 }
