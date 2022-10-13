@@ -25,7 +25,7 @@ export function Filtro({ data, setData }) {
     }
 
     return (
-        <div className={styles.fora}>
+        <div className={styles.container}>
             <div className={styles.titulos}>
                 <p>Category</p>
             </div>
@@ -38,24 +38,70 @@ export function Filtro({ data, setData }) {
                 <button onClick={() => categoriaFiltrada('skirt')}>Skirts</button>
                 <button onClick={() => categoriaFiltrada('shoes')}>Shoes</button>
             </div>
-            <div className={styles.tituloscores}>
+            <div className={styles.titulos}>
                 <p>Color</p>
             </div>
-
             <div className={styles.cores}>
-                <div className={styles.divcores}>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/all.jpeg" />
+                    </span>
                     <button onClick={() => corFiltrada("all")}>All</button>
-                    <button onClick={() => corFiltrada('beige')}><img src="/cores/beige.jpeg" /></button>
-                    <button onClick={() => corFiltrada('black')}><img src="/cores/black.jpeg" /></button>
-                    <button onClick={() => corFiltrada('blue')}><img src="/cores/blue.png" /></button>
-                    <button onClick={() => corFiltrada('green')}><img src="/cores/green.png" /></button>
-                    <button onClick={() => corFiltrada('grey')}><img src="/cores/grey.jpeg" /></button>
-                    <button onClick={() => corFiltrada('pink')}><img src="/cores/pink.png" /></button>
-                    <button onClick={() => corFiltrada('purple')}><img src="/cores/purple.png" /></button>
-                    <button onClick={() => corFiltrada('red')}><img src="/cores/red.png" /></button>
-                    <button onClick={() => corFiltrada('white')}><img src="/cores/white.png" /></button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/beige.jpeg" />
+                    </span>
+                    <button onClick={() => corFiltrada('beige')}>Beige</button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/black.jpeg" />
+                    </span><button onClick={() => corFiltrada('black')}>Black</button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/green.png" />
+                    </span><button onClick={() => corFiltrada('green')}>Green</button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/grey.jpeg" />
+                    </span>
+                    <button onClick={() => corFiltrada('grey')}>Grey</button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/blue.png" />
+                    </span>
+                    <button onClick={() => corFiltrada('blue')}>Blue</button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/pink.png" />
+                    </span>
+                    <button onClick={() => corFiltrada('pink')}>Pink</button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/purple.png" />
+                    </span>
+                    <button onClick={() => corFiltrada('purple')}>Purple</button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/red.png" />
+                    </span>
+                    <button onClick={() => corFiltrada('red')}>Red</button>
+                </div>
+                <div className={styles.botaoCores}>
+                    <span className={styles.imagem}>
+                        <img src="/cores/white.png" />
+                    </span>
+                    <button onClick={() => corFiltrada('white')}>White</button>
                 </div>
             </div>
+
 
         </div>
     );

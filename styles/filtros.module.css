@@ -1,50 +1,55 @@
-.titulos {
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 550;
-    position: relative;
-    left: 100px;
-
+.container{
+    display: flex;
+    flex-direction: column;
 }
-
-.tituloscores {
-    color: black;
+.titulos {
+    color: var(--roxo-escuro);
+    opacity: 0.5;
     font-size: 1.2rem;
     font-weight: 550;
-    position: relative;
-    left: 100px;
-
 }
 
 .categorias {
     display: flex;
-    background-color: aqua;
+    background-color: transparent;
     flex-direction: column;
-    height: 60px;
-
 }
 
 .categorias button {
     border: none;
+    background-color: transparent;
     display: flex;
-    background-color: red;
     font-size: 1rem;
-    height: 70px;
-
+    height: 35px;
 }
 
-.fora {
-    background-color: aliceblue;
-    display: flex;
-    margin-left: -90%;
-
-
-    justify-content: space-between;
+.categorias button:hover{
+    color: var(--roxo-escuro);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .cores {
     display: flex;
-    background-color: rgba(255, 0, 208, 0);
+    background-color: transparent;
+    flex-direction: column;
+}
+
+.cores button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    font-size: 1rem;
+    height: 35px;
+    
+}
+
+.cores button:hover{
+    color: var(--roxo-escuro);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .cores img {
@@ -52,14 +57,13 @@
     width: 18px;
 }
 
-.cores button {
-    background-color: transparent;
-    height: 18px;
-    width: 18px;
-    border: black solid 1px;
+.imagem{
+    display: flex;
+    width: 25px;
 }
 
-.divcores {
-    background-color: rgba(255, 255, 0, 0.265);
+.botaoCores{
     display: flex;
+    flex-direction: row;
+
 }

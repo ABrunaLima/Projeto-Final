@@ -3,6 +3,7 @@
     background: linear-gradient(90deg, rgba(255, 226, 244, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 226, 244, 1) 100%);
     background-size: cover;
     width: 100vw;
+    height: 100vh;
     background-repeat: repeat-y;
 
 }
@@ -20,6 +21,7 @@
     background-color: var(--roxo-escuro);
     color: white;
     opacity: 25%;
+    cursor: pointer;
 }
 
 .container {
@@ -41,30 +43,39 @@
 
 
 .borda {
+    margin-top: 2vh;
     display: flex;
     background-color: rgba(128, 128, 128, 0.034);
-    height: 670px;
-    width: 610px;
-    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    height: 600px;
+    width: 410px;
+   border: none;
 
 }
 
 .top {
     height: 200px;
-    width: 500px;
-    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    width: 300px;
+    border-radius: 3px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+   /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);*/
 }
 
 .middle {
     height: 300px;
-    width: 500px;
-    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    width: 300px;
+    border-radius: 3px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);*/
+    
 }
 
 .bottom {
     height: 100px;
-    width: 500px;
-    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    width: 300px;
+    border-radius: 3px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);*/
+
 }
 
 .top img {

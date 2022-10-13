@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 30vw;
+    width: 40vw;
     background-color: transparent;
 
 }
@@ -39,6 +39,7 @@
     max-width: 100%;
     max-height: 500px;
     object-fit: fill;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .info {
@@ -65,8 +66,8 @@
 }
 
 .botoes img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-left: 70px;
 }
 
