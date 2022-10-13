@@ -1,55 +1,70 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     max-width: 30vw;
+    background-color: transparent;
 
 }
 
-.carrosel{
+.carrosel {
     display: flex;
     overflow: auto;
     scroll-behavior: smooth;
 
 }
 
-.carrosel::-webkit-scrollbar{
+.carrosel::-webkit-scrollbar {
     display: none;
 }
 
-.item{
+.item {
     margin: 10px;
     padding: 10px;
     width: 300px;
     flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.imagem img{
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
+.item:hover {
+    cursor: pointer;
+  
 }
 
-.info{
+.imagem img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: fill;
+}
+
+.info {
     height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.info span{
+
+
+.info span {
     display: block;
     text-align: center;
     padding: 5px;
     font-size: 1.2rem;
     margin: 10px;
-    color:black;
+    color: black;
 }
-.botoes{
+
+.botoes {
     width: 100%;
     text-align: center;
 }
 
-.botoes img{
+.botoes img {
     width: 20px;
     height: 20px;
     margin-left: 70px;
@@ -61,6 +76,6 @@
     cursor: pointer;
 }
 
-.botoes button:first-child img{
+.botoes button:first-child img {
     transform: rotate(180deg);
 }

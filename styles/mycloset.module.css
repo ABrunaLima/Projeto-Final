@@ -1,24 +1,25 @@
 .pagina {
-    /* background-image: url("../public/images/minimlaista-wallpaper.jpg.webp");
-    */
-
-
-    background-color: rgba(255, 192, 203, 0.328);
-    background-size: contain;
+   background: rgb(255, 226, 244);
+    background: linear-gradient(90deg, rgba(255, 226, 244, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 226, 244, 1) 100%);
+    background-size: cover;
     width: 100vw;
-    height: 190%;
+    background-repeat: repeat-y;
+
 }
 
 .botoes {
     display: flex;
     flex-direction: column;
+    border-color: white;
     background-color: transparent;
     width: 110px;
 
 }
 
 .botoes button:hover {
-    background-color: rgba(0, 0, 0, 0.146);
+    background-color: var(--roxo-escuro);
+    color: white;
+    opacity: 25%;
 }
 
 .container {
@@ -32,10 +33,12 @@
 .botoes button {
     background-color: transparent;
     height: 500px;
+    border-color: white;
+    border-radius: 5px;
     width: 110px;
     font-size: x-large;
-
 }
+
 
 .borda {
     display: flex;

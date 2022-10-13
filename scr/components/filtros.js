@@ -44,7 +44,7 @@ export function Filtro({ data, setData }) {
 
             <div className={styles.cores}>
                 <div className={styles.divcores}>
-                    <button onClick={() => corFiltrada(data)}>All</button>
+                    <button onClick={() => corFiltrada("all")}>All</button>
                     <button onClick={() => corFiltrada('beige')}><img src="/cores/beige.jpeg" /></button>
                     <button onClick={() => corFiltrada('black')}><img src="/cores/black.jpeg" /></button>
                     <button onClick={() => corFiltrada('blue')}><img src="/cores/blue.png" /></button>
