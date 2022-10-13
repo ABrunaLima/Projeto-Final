@@ -41,7 +41,6 @@ export default function BotoesClose() {
                         <button>Look 3</button>
                         <button>Look 4</button>
                         <button>Look 5</button>
-                        <button>Look 6</button>
                     </div>
                     <div style={{ height: "700px", width: "590px" }}>
                         <Look

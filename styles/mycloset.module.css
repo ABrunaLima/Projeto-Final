@@ -26,13 +26,13 @@
     display: flex;
     align-content: center;
     justify-content: center;
-    margin-top: 5%;
+    
 }
 
 
 .botoes button {
     background-color: transparent;
-    height: 500px;
+    height: 150px;
     border-color: white;
     border-radius: 5px;
     width: 110px;
@@ -43,33 +43,35 @@
 .borda {
     display: flex;
     background-color: rgba(128, 128, 128, 0.034);
-    height: 700px;
-    width: 700px;
+    height: 670px;
+    width: 610px;
     border: 0.5px solid rgba(0, 0, 0, 0.034);
 
 }
 
 .top {
-    height: 250px;
-    width: 590;
+    height: 200px;
+    width: 500px;
     border: 0.5px solid rgba(0, 0, 0, 0.034);
 }
 
 .middle {
-    height: 325px;
-    width: 590;
+    height: 300px;
+    width: 500px;
     border: 0.5px solid rgba(0, 0, 0, 0.034);
 }
 
 .bottom {
-    height: 125px;
-    width: 590;
+    height: 100px;
+    width: 500px;
     border: 0.5px solid rgba(0, 0, 0, 0.034);
 }
 
 .top img {
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 200px;
     justify-content: flex;
     left: 50%;
     top: 50%;
@@ -78,8 +80,10 @@
 }
 
 .middle img {
-    width: 300px;
-    height: 400px;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 300px;
     justify-content: flex;
     left: 50%;
     top: 50%;
@@ -88,8 +92,10 @@
 }
 
 .bottom img {
-    width: 200px;
-    height: 200px;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 100px;
     justify-content: flex;
     left: 50%;
     top: 50%;
