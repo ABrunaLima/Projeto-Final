@@ -11,14 +11,10 @@ import {
 
 
 //Recebe um argumento que e um array de ids de looks
-async function createCloset(looks, title, userId) {
-    const maxId = await getMaxClosetId()
-
+async function createCloset(userId) {
     const closetId = insertNewCloset({
-        closet: looks,
-        title: title,
+        closet: [],
         userId: userId,
-        idx: JSON.stringify(maxId) + 1 //vai numerar os closets (closet 1, closet 2....)
     })
     return closetId
 }
