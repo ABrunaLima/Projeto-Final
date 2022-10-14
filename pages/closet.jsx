@@ -3,6 +3,7 @@ import styles from '../styles/Closet.module.css'
 import { NavBar } from '../scr/components/navbar'
 import { NavBarCloset } from '../scr/components/navBarCloset'
 import BotoesClose from './mycloset'
+import { useEffect, useState } from 'react'
 
 //teste PILOTO
 const closets = [
@@ -10,46 +11,6 @@ const closets = [
         id: "1",
         imagePath: "camisaDoFlamengo.png",
         title: "Closet 1"
-    },
-    {
-        id: "2",
-        imagePath: "camisaSocialpreta.png",
-        title: "Closet 2"
-    },
-    {
-        id: "3",
-        imagePath: "armadura.png",
-        title: "Closet 3"
-    },
-    {
-        id: "4",
-        imagePath: "camisaDoFlamengo.png",
-        title: "Closet 4"
-    },
-    {
-        id: "5",
-        imagePath: "camisaSocialpreta.png",
-        title: "Closet 5"
-    },
-    {
-        id: "4",
-        imagePath: "camisaDoFlamengo.png",
-        title: "Closet 4"
-    },
-    {
-        id: "5",
-        imagePath: "camisaSocialpreta.png",
-        title: "Closet 5"
-    },
-    {
-        id: "4",
-        imagePath: "camisaDoFlamengo.png",
-        title: "Closet 4"
-    },
-    {
-        id: "5",
-        imagePath: "camisaSocialpreta.png",
-        title: "Closet 5"
     }
 
 ]
@@ -57,27 +18,51 @@ const closets = [
 
 export default function closet() {
 
+    const[receberCloset, setReceberCloset] = useState([])
+
     const router = useRouter()
 
-    // function novoClosetVazio() {
+    async function novoClosetVazio() {
 
-    //     const res = await fetch("/api/closet", {
-    //         method: "POST",
-    //         headers: {
-    //             "authorization": localStorage.getItem("token")
-    //         }
-    //     })
+        const res = await fetch("/api/closet", {
+            method: "POST",
+            headers: {
+                "authorization": localStorage.getItem("token")
+            }
+        })
 
-    //     if (res.status === 200) {
-    //         const res = await fetch("/api/closet", {
-    //             method: "GET",
-    //             headers: {
-    //                 "authorization": localStorage.getItem("token")
-    //             }
-    //         })
-    //     }
 
-    // }
+        getClosets()
+    }
+
+    async function getClosets() {
+        const res = await fetch("/api/closet", {
+            method: "GET",
+            headers: {
+                "authorization": localStorage.getItem("token")
+            }
+        })
+        const json = await res.json()
+        console.log(json)
+        setReceberCloset(json)
+
+
+    }
+
+    async function deleteCloset(){
+        const res = await fetch("/api/closet", {
+            method: "DELETE",
+            headers: {
+                "authorization": localStorage.getItem("token")
+            }
+        })
+        getClosets()
+    }
+    
+
+    useEffect(() => {
+        getClosets()
+    }, [])
 
     return (
         //**************************************************************************************************************
@@ -96,7 +81,7 @@ export default function closet() {
                         <section>
 
                             <div className={styles.lookEachArea}>
-                                {closets.map(closet => (
+                                {receberCloset.map(closet => (
                                     <div>
                                         <span className={styles.tituloDiv}>{closet.title}</span>
                                         <div key={closet.id} className={styles.area}>
@@ -116,6 +101,7 @@ export default function closet() {
 
                         <div className={styles.buttonCriaClosetVAzio}>
                             <button onClick={() => novoClosetVazio()}>clica em mim</button>
+                            <button onClick={() => deleteCloset()}>clica em mim</button>
                         </div>
 
                         {/* ------------------------------------------------------------------------------------------------ */}
