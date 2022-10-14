@@ -4,9 +4,10 @@ import {
     insertLookToCloset,
     getClosets,
     getAClosetById,
-    getMaxClosetId,
+    getClosetsByUserId,
     removeClosetById,
-    removeOneLookFromClosetById
+    removeOneLookFromClosetById,
+    getLastClosetCreatedByUserId
 } from "../data/closet";
 
 
@@ -14,15 +15,25 @@ import {
 async function createCloset(userId) {
     const closetId = insertNewCloset({
         closet: [],
-        userId: userId,
+        userId: userId
     })
     return closetId
 }
 
 //salvar o token e o id do look no closet correspondente
 async function saveLookOnCloset(lookId, closetId) {
-    const savedLook = await insertLookToCloset(lookId, closetId)
+    const savedLook = await insertLookToCloset(lookId, closetId, token)
     return savedLook
+}
+
+async function showLastClosetCreatedByUserId(userId) {
+    const lastCloset = getLastClosetCreatedByUserId(userId)
+    return lastCloset
+}
+
+async function showClosetsByUserId(userId) {
+    const closets = await getClosetsByUserId(userId)
+    return closets
 }
 
 //mostrar todos os looks de um closet
@@ -63,29 +74,7 @@ export {
     saveLookOnCloset,
     moveClosetToTrash,
     moveLookOfClosetToTrash,
-    showLooksOnCloset
+    showLooksOnCloset,
+    showClosetsByUserId,
+    showLastClosetCreatedByUserId
 }
-
-
-// export default async function insertTheClothing(req, res) {
-//     if (req.method === "POST") {
-
-//         await insertClothing({
-
-
-//         })
-//     }
-
-// }
-
-// export default async function signUpOne(req, res) {
-//     if (req.method === "GET") {
-//         const email = req.body.req
-//         if (email == "MM@gmail.com") {
-//             await loginOne(id)
-//             res.senStatus(200)
-//         } else {
-//             return false
-//         }
-//     }
-// }
