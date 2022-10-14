@@ -1,5 +1,4 @@
-import Image from "next/image"
-import imagem from "./login.png"
+
 import styles from "/styles/botoes.module.css"
 export function Login() {
     const login = async () => {
@@ -12,7 +11,7 @@ export function Login() {
     }
     return (
         <div>
-            <div className={styles.botaoLogin}><button onClick={() => login()}><img src="/login.png" /></button></div>
+            <div className={styles.botaoLogin}><button onClick={() => login()}><img src="/images/login.png" /></button></div>
         </div>
     )
 }
