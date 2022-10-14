@@ -59,25 +59,25 @@ export default function closet() {
 
     const router = useRouter()
 
-    function novoClosetVazio() {
+    // function novoClosetVazio() {
 
-        const res = await fetch("/api/closet", {
-            method: "POST",
-            headers: {
-                "authorization": localStorage.getItem("token")
-            }
-        })
+    //     const res = await fetch("/api/closet", {
+    //         method: "POST",
+    //         headers: {
+    //             "authorization": localStorage.getItem("token")
+    //         }
+    //     })
 
-        if (res.status === 200) {
-            const res = await fetch("/api/closet", {
-                method: "GET",
-                headers: {
-                    "authorization": localStorage.getItem("token")
-                }
-            })
-        }
+    //     if (res.status === 200) {
+    //         const res = await fetch("/api/closet", {
+    //             method: "GET",
+    //             headers: {
+    //                 "authorization": localStorage.getItem("token")
+    //             }
+    //         })
+    //     }
 
-    }
+    // }
 
     return (
         //**************************************************************************************************************
