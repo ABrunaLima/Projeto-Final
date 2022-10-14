@@ -41,8 +41,6 @@ export default function BotoesClose() {
                 "authorization": localStorage.getItem("token")
             }
         })
-
-
         getLooks()
     }
 
