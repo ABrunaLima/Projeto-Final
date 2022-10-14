@@ -7,7 +7,9 @@
 }
 
 .texto {
-	color: white;
+	color: rgb(251, 251, 251);
+	margin-top: 5vh;
+	font-size: 2vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -15,14 +17,14 @@
 }
 
 
-.containerBotao{
+.containerBotao {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .botao {
@@ -30,10 +32,13 @@
 	position: relative;
 	padding: 1em 1.5em;
 	border: none;
+	width: 28vh;
 	background-color: transparent;
 	cursor: pointer;
 	outline: none;
-	font-size: 18px;
+	font-size: 2vh;
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Courier New, monospace;
 	font-weight: 600;
 	margin: 1em 0.8em;
 	color: var(--roxo-escuro);

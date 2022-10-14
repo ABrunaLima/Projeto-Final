@@ -1,7 +1,6 @@
 import { ObjectId } from "mongodb"
 import { insertClothing } from "../scr/data/clothing"
 import { createCloset, showLastClosetCreatedByUserId } from "../scr/services/closet"
-import { pullCloth } from "../scr/services/clothing"
 import { createNewLook } from "../scr/services/look"
 
 function populate() {

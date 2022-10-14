@@ -41,7 +41,6 @@ DELETE: api/clothing/:id
     api/closet/:id/
 
 2. - API que cria um look; (doing)
-
     (salva o look no ultimo closet criado)
 
     POST: api/closet/look
@@ -63,13 +62,13 @@ DELETE: api/clothing/:id
     (DELETE, POST, GET)
     api/closet/look/:id
 
-2. - API que mostra toos os looks de um closet especifico (x)
+2. - API que mostra todos os looks de um closet especifico (x)
     GET: api/closet/:id
 
 2. - API que cria um closet (x)
     POST: api/closet
 
-3. - API que carrega todos os closets (x)
+3. - API que carrega todos os closets de um user(x)
     GET: api/closet
 
 4. - API que deleta um closet especifico (x)
