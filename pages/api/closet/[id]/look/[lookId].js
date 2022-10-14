@@ -48,7 +48,7 @@ export default async function handler(req, res) {
 
         //VERIFICA SE O LOOK EXISTE NO ARRAY DO CLOSET
         const look = JSON.parse(closet).some(ele => ele == lookId)
-
+        console.log(look)
 
         if (closet) {
             //encontrar o id no array do closet

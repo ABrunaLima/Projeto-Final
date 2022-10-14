@@ -113,3 +113,15 @@
     position: relative;
     transform: translate(-50%, -50%)
 }
+
+.minus button {
+    position: fixed;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.minus img {
+    width: 20px;
+    height: 20px;
+}
