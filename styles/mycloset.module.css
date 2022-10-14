@@ -1,72 +1,88 @@
 .pagina {
-    /* background-image: url("../public/images/minimlaista-wallpaper.jpg.webp");
-    */
-
-
-    background-color: rgba(255, 192, 203, 0.328);
-    background-size: contain;
+    background: rgb(255, 226, 244);
+    background: linear-gradient(90deg, rgba(255, 226, 244, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 226, 244, 1) 100%);
+    background-size: cover;
     width: 100vw;
-    height: 190%;
+    height: 100vh;
+    background-repeat: repeat-y;
+
 }
 
 .botoes {
     display: flex;
     flex-direction: column;
+    border-color: white;
     background-color: transparent;
     width: 110px;
 
 }
 
 .botoes button:hover {
-    background-color: rgba(0, 0, 0, 0.146);
+    background-color: var(--roxo-escuro);
+    color: white;
+    opacity: 25%;
+    cursor: pointer;
 }
 
 .container {
     display: flex;
     align-content: center;
     justify-content: center;
-    margin-top: 5%;
+
 }
 
 
 .botoes button {
     background-color: transparent;
-    height: 500px;
+    height: 150px;
+    border-color: white;
+    border-radius: 5px;
     width: 110px;
     font-size: x-large;
-
 }
 
+
 .borda {
+    margin-top: 2vh;
     display: flex;
     background-color: rgba(128, 128, 128, 0.034);
-    height: 700px;
-    width: 700px;
-    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    height: 600px;
+    width: 410px;
+    border: none;
 
 }
 
 .top {
-    height: 250px;
-    width: 590;
-    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    height: 200px;
+    width: 300px;
+    border-radius: 3px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);*/
 }
 
 .middle {
-    height: 325px;
-    width: 590;
-    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    height: 300px;
+    width: 300px;
+    border-radius: 3px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);*/
+
 }
 
 .bottom {
-    height: 125px;
-    width: 590;
-    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    height: 100px;
+    width: 300px;
+    border-radius: 3px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);*/
+
 }
 
 .top img {
-    width: 250px;
-    height: 200px;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 200px;
     justify-content: flex;
     left: 50%;
     top: 50%;
@@ -75,8 +91,10 @@
 }
 
 .middle img {
-    width: 250px;
-    height: 300px;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 300px;
     justify-content: flex;
     left: 50%;
     top: 50%;
@@ -85,8 +103,10 @@
 }
 
 .bottom img {
-    width: 200px;
-    height: 125px;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 100px;
     justify-content: flex;
     left: 50%;
     top: 50%;

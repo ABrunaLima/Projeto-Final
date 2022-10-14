@@ -1,17 +1,25 @@
-import { getMaxClosetId } from "../../../scr/data/closet"
-import { createCloset, showAllClosets } from "../../../scr/services/closet"
-import { findUserByToken } from "../../../scr/services/users"
+import { showOneCloth } from "../../../scr/services/clothing"
+import { createNewLook, insertClothOnLook, showOneLook } from "../../../scr/services/look"
 
+export default async function handler(req, res) {
+    const clothes = req.body
+    if (req.method === "POST") {
+        const look = await createNewLook(clothes)
+        res.status(200).json(look)
+    }
+}
+/*
 export default async function handler(req, res) {
 
     //adicionar um closet a base de dados
     if (req.method === "POST") {
+        const {
+            looks,
+            title,
+            userId
+        } = req.body
 
-        const token = req.headers["authorization"]
-        const user = await findUserByToken(token)
-
-        console.log(user)
-        const objCloset = await createCloset(user._id)
+        const objCloset = await createCloset(looks, title, userId)
 
         if (objCloset != undefined) {
             res.status(200).json(objCloset)
@@ -33,3 +41,4 @@ export default async function handler(req, res) {
 
 }
 
+*/

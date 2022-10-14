@@ -6,27 +6,18 @@ const COLLECTION_NAME = "look"
 
 //criar um novo look
 //recebe um array de ids de roupas
-async function insertNewLook(clothes) {
+async function insertNewLook(clothes, closetId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return (await collection.insertOne(clothes)).insertedId
+    return (await collection.insertOne(clothes, closetId)).insertedId
 }
 
-//adicionar roupa ao look
-async function insertClothingToLook(lookId, clothId) {
+
+//atualiza ou insere peça de roupa no look
+async function updateClothingToLook(lookId, clothId, slot) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
     return await collection.updateOne(
         { _id: lookId },
-        { $push: { cloth: { clothId } } },
-        { upserted: true }
-    )
-}
-
-//atualiza peça de roupa já existente
-async function updateClothingToLook(lookId, clothId) {
-    const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.updateOne(
-        { _id: lookId },
-        { $set: { cloth: { clothId } } },
+        { $set: { [slot]: { clothId } } },
         { upserted: true }
     )
 }
