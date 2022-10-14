@@ -1,5 +1,6 @@
-import { NavBarSearch } from "../scr/components/navBarSearch"
+import { NavBar} from "../scr/components/navbar"
 import styles from "../styles/mycloset.module.css"
+import { useState } from "react"
 
 const top = {
     "id": "1",
@@ -30,9 +31,17 @@ const middle = {
 
 export default function BotoesClose() {
 
+    fetch("/api/clothing", {
+        method: "GET",
+        headers: {
+            "authorization": 'localStorage.getItem("token")'
+        },
+
+    })
+
     return (
         <div className={styles.pagina}>
-            <NavBarSearch />
+            <NavBar />
             <div className={styles.container}>
                 <div className={styles.borda}>
                     <div className={styles.botoes}>
@@ -41,7 +50,6 @@ export default function BotoesClose() {
                         <button>Look 3</button>
                         <button>Look 4</button>
                         <button>Look 5</button>
-                        <button>Look 6</button>
                     </div>
                     <div style={{ height: "700px", width: "590px" }}>
                         <Look
@@ -56,18 +64,30 @@ export default function BotoesClose() {
     )
 }
 
-export function Look({ top = {}, bottom = {}, middle = {} }) {
+export function Look({ top = {}, bottom = {}, middle = {}, onDelete}) {
+
+
     console.log(top, middle, bottom)
     return <div>
         <div className={styles.top}>
+            <span className={styles.minus}>
+            <button onClick={() => onDelete(top)}><img src="/images/minus.png" /></button>
+            </span>
             <img src={top.pathToImage} />
         </div>
         <div className={styles.middle}>
+        <span className={styles.minus}>
+            <button onClick={() => onDelete(middle)} ><img src="/images/minus.png" /></button>
+            </span>
             <img src={middle.pathToImage} />
         </div>
         <div className={styles.bottom}>
+        <span className={styles.minus}>
+            <button onClick={() => onDelete(bottom)}><img src="/images/minus.png" /></button>
+            </span>
             <img src={bottom.pathToImage} />
         </div>
 
     </div>
+
 }
