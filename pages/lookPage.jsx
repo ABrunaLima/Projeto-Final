@@ -46,9 +46,11 @@ export default function LookPage() {
         const partesDeBaixo = Roupas.filter(r => r.slot === "bottom")
         const indiceRoupaBaixo = Math.floor(Math.random() * partesDeBaixo.length);
 
-        setLookAtual(prevLook => ({"top": partesDeCima[indiceRoupaCima],
+        setLookAtual(prevLook => ({
+            "top": partesDeCima[indiceRoupaCima],
             "middle": partesMeio[indiceRoupaMeio],
-            "bottom": partesDeBaixo[indiceRoupaBaixo]}));
+            "bottom": partesDeBaixo[indiceRoupaBaixo]
+        }));
 
 
     }
@@ -60,9 +62,9 @@ export default function LookPage() {
             <NavBarSearch />
             <div className={styles.linhaDoCarrossel}>
                 <div className={styles.filtros}>
-                    <Filtro 
-                    data={roupaFiltrada}
-                    setData={setRoupaFiltrada} />
+                    <Filtro
+                        data={roupaFiltrada}
+                        setData={setRoupaFiltrada} />
                 </div>
                 <div className={styles.look}>
                     <Look
@@ -73,7 +75,8 @@ export default function LookPage() {
                     />
                     <span className={styles.mais}>
                         <button onClick={(e) => saveLook()}><img src='/images/plus.png' /></button>
-                        <button onClick={geraAleatorio}><img src='/images/aleatorio.png' /></button>
+                        <span className={styles.aleatorio}>
+                            <button onClick={geraAleatorio}><img src='/images/aleatorio.png' /></button></span>
                     </span>
                 </div>
                 <div className={styles.carrossel}>
