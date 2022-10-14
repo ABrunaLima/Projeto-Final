@@ -18,7 +18,7 @@ const closets = [
 
 export default function closet() {
 
-    const[receberCloset, setReceberCloset] = useState([])
+    const [receberCloset, setReceberCloset] = useState([])
 
     const router = useRouter()
 
@@ -49,8 +49,8 @@ export default function closet() {
 
     }
 
-    async function deleteCloset(){
-        const res = await fetch("/api/closet", {
+    async function deleteCloset(id) {
+        const res = await fetch("/api/closet/" + id, {
             method: "DELETE",
             headers: {
                 "authorization": localStorage.getItem("token")
@@ -58,7 +58,7 @@ export default function closet() {
         })
         getClosets()
     }
-    
+
 
     useEffect(() => {
         getClosets()
@@ -88,6 +88,8 @@ export default function closet() {
                                             <button onClick={() => router.push('/mycloset')}>
                                                 Start
                                             </button>
+                                            <button onClick={() => deleteCloset(closet._id)}>delete</button>
+
                                             <div className={styles.imagem}>
                                                 <img src={closet.imagePath} />
                                             </div>
@@ -100,8 +102,7 @@ export default function closet() {
                         </section>
 
                         <div className={styles.buttonCriaClosetVAzio}>
-                            <button onClick={() => novoClosetVazio()}>clica em mim</button>
-                            <button onClick={() => deleteCloset()}>clica em mim</button>
+                            <button onClick={() => novoClosetVazio()}>adiciona</button>
                         </div>
 
                         {/* ------------------------------------------------------------------------------------------------ */}
