@@ -28,7 +28,7 @@ export function NavBar() {
                 </div>
                 <div className={styles.textos}>
                     {
-                        navItems.map(n => <NavItem {...n} />)
+                        navItems.map((n, i) => <NavItem key={i} {...n} />)
                     }
                     <Login />
                 </div>

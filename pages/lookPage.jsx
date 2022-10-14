@@ -51,40 +51,41 @@ export default function LookPage() {
             "middle": partesMeio[indiceRoupaMeio],
             "bottom": partesDeBaixo[indiceRoupaBaixo]
         }));
-
-
     }
 
 
-
-    return (
-        <div className={styles.container}>
-            <NavBarSearch />
-            <div className={styles.linhaDoCarrossel}>
-                <div className={styles.filtros}>
-                    <Filtro
-                        data={roupaFiltrada}
-                        setData={setRoupaFiltrada} />
-                </div>
-                <div className={styles.look}>
-                    <Look
-                        onDelete={removerLook}
-                        top={lookAtual.top}
-                        middle={lookAtual.middle}
-                        bottom={lookAtual.bottom}
-                    />
-                    <span className={styles.mais}>
-                        <button onClick={(e) => saveLook()}><img src='/images/plus.png' /></button>
-                        <button onClick={geraAleatorio}><img src='/images/aleatorio.png' /></button>
-                    </span>
-                </div>
-                <div className={styles.carrossel}>
-                    <Carrosel
-                        data={roupaFiltrada}
-                        onEscolherLook={alterarLook} />
-                </div>
-            </div>
-        </div >
-
-    )
 }
+
+
+
+return (
+    <div className={styles.container}>
+        <NavBarSearch />
+        <div className={styles.linhaDoCarrossel}>
+            <div className={styles.filtros}>
+                <Filtro
+                    data={roupaFiltrada}
+                    setData={setRoupaFiltrada} />
+            </div>
+            <div className={styles.look}>
+                <Look
+                    onDelete={removerLook}
+                    top={lookAtual.top}
+                    middle={lookAtual.middle}
+                    bottom={lookAtual.bottom}
+                />
+                <span className={styles.mais}>
+                    <button onClick={(e) => saveLook()}><img src='/images/plus.png' /></button>
+                    <span className={styles.aleatorio}>
+                        <button onClick={geraAleatorio}><img src='/images/aleatorio.png' /></button></span>
+                </span>
+            </div>
+            <div className={styles.carrossel}>
+                <Carrosel
+                    data={roupaFiltrada}
+                    onEscolherLook={alterarLook} />
+            </div>
+        </div>
+    </div >
+
+)

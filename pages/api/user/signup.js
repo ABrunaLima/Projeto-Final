@@ -4,12 +4,8 @@ import { newUser } from "../../../scr/services/users"
 export default async function handler(req, res) {
     if (req.method === "POST") {
 
-        const {
-            email,
-            username
-        } = req.body
-
-        console.log(email)
+        const email = "MM@gmail.com"
+        const username = "Marta Maria"
 
         const dados = { email, username }
 
