@@ -36,7 +36,6 @@ async function removeLookById(lookId) {
 
 export {
     insertNewLook,
-    insertClothingToLook,
     updateClothingToLook,
     getLookById,
     removeLookById

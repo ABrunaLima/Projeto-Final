@@ -1,4 +1,4 @@
-import { NavBar} from "../scr/components/navbar"
+import { NavBar } from "../scr/components/navbar"
 import styles from "../styles/mycloset.module.css"
 import { useState } from "react"
 
@@ -64,26 +64,26 @@ export default function BotoesClose() {
     )
 }
 
-export function Look({ top = {}, bottom = {}, middle = {}, onDelete}) {
+export function Look({ top = {}, bottom = {}, middle = {}, onDelete }) {
 
 
     console.log(top, middle, bottom)
     return <div>
         <div className={styles.top}>
             <span className={styles.minus}>
-            <button onClick={() => onDelete(top)}><img src="/images/minus.png" /></button>
+                <button onClick={() => onDelete(top)}><img src="/images/minus.png" /></button>
             </span>
             <img src={top.pathToImage} />
         </div>
         <div className={styles.middle}>
-        <span className={styles.minus}>
-            <button onClick={() => onDelete(middle)} ><img src="/images/minus.png" /></button>
+            <span className={styles.minus}>
+                <button onClick={() => onDelete(middle)} ><img src="/images/minus.png" /></button>
             </span>
             <img src={middle.pathToImage} />
         </div>
         <div className={styles.bottom}>
-        <span className={styles.minus}>
-            <button onClick={() => onDelete(bottom)}><img src="/images/minus.png" /></button>
+            <span className={styles.minus}>
+                <button onClick={() => onDelete(bottom)}><img src="/images/minus.png" /></button>
             </span>
             <img src={bottom.pathToImage} />
         </div>
