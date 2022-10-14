@@ -23,7 +23,7 @@ export function NavBar() {
         <div>
             <nav className={styles.nav}>
                 <div className={styles.marca}>
-                    <img src="/images/LogoPreto.png" />
+                    <img src="/images/logo-my-vest.svg" />
                 </div>
                 <div className={styles.textos}>
                     {
