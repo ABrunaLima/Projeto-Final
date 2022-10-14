@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+import { NavBarSearch } from "../scr/components/navBarSearch"
+import { NavBarMyCloset } from "../scr/components/navBarMyCloset"
+=======
 import { NavBar} from "../scr/components/navbar"
+>>>>>>> 2de7625ceeebfd7dece46844d6430298aea8229e
 import styles from "../styles/mycloset.module.css"
 import { useState } from "react"
 
@@ -41,7 +46,11 @@ export default function BotoesClose() {
 
     return (
         <div className={styles.pagina}>
+<<<<<<< HEAD
+            <NavBarMyCloset />
+=======
             <NavBar />
+>>>>>>> 2de7625ceeebfd7dece46844d6430298aea8229e
             <div className={styles.container}>
                 <div className={styles.borda}>
                     <div className={styles.botoes}>

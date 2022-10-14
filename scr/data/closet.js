@@ -15,20 +15,26 @@ async function insertNewCloset(closet) {
 }
 
 //Retorna o maior id existente num closet
-async function getMaxClosetId() {
+async function getLastClosetCreatedByUserId(userId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
-    return await collection.find().sort({ idx: -1 }).limit(1)
+    return await collection.find({ userId: new ObjectId(userId) }).sort({ _id: -1 }).limit(1).toArray();
 }
 
 //inserir o look ao closet
-async function insertLookToCloset(lookId, userId) {
+async function insertLookToCloset(lookId, closetId) {
     const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
     //adicionar roupa que tenha um id existente
     return await collection.updateOne(
-        { userId: userId },
+        { closetId: closetId },
         { $push: { closet: { lookId } } },
         { upserted: true }
     )
+}
+
+//retorna todos os closets criados por um usuário
+async function getClosetsByUserId(userId) {
+    const collection = await getMongoCollection(DB_NAME, COLLECTION_NAME)
+    return await collection.find({ userId: new ObjectId(userId) }).toArray()
 }
 
 // async function getALookFromClosetById(lookId, closetId) {
@@ -67,8 +73,9 @@ export {
     insertLookToCloset,
     getClosets,
     getAClosetById,
-    getMaxClosetId,
     removeClosetById,
     removeOneLookFromClosetById,
+    getLastClosetCreatedByUserId,
+    getClosetsByUserId
     // getALookFromClosetById
 }

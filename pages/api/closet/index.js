@@ -1,5 +1,5 @@
 import { getMaxClosetId } from "../../../scr/data/closet"
-import { createCloset, showAllClosets } from "../../../scr/services/closet"
+import { createCloset, showAllClosets, showClosetsByUserId, showLastClosetCreatedByUserId } from "../../../scr/services/closet"
 import { findUserByToken } from "../../../scr/services/users"
 
 export default async function handler(req, res) {
@@ -21,8 +21,14 @@ export default async function handler(req, res) {
 
     } else if (req.method === "GET") {
 
-        //mostrar todos os closets armazenados
-        const allClosets = await showAllClosets()
+        //encontrar ID do usuario
+        const token = req.headers["authorization"]
+        const user = await findUserByToken(token)
+        console.log(user._id)
+
+        //mostrar todos os closets armazenados deste usuario
+        const allClosets = await showClosetsByUserId(user._id)
+        console.log(allClosets)
         if (allClosets != null) {
             res.status(200).json(allClosets)
         } else {

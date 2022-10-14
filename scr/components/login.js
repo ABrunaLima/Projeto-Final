@@ -12,6 +12,20 @@ export function Login() {
             localStorage.setItem("token", json.token)
             setIsLoggedIn(json.token)
         }
+
+
+        // fetch("/api/closet", {
+        //     method: "GET",
+        //     headers: {
+        //         "authorization": localStorage.getItem("token")
+        //     }
+        // })
+        // fetch("/api/closet", {
+        //     method: "POST",
+        //     headers: {
+        //         "authorization": localStorage.getItem("token")
+        //     }
+        // })
     }
 
     useEffect(() => {

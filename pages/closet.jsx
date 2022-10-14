@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import styles from '../styles/Closet.module.css'
 import { NavBar } from '../scr/components/navbar'
+import { NavBarCloset } from '../scr/components/navBarCloset'
 import BotoesClose from './mycloset'
 
 //teste PILOTO
@@ -63,7 +64,7 @@ export default function closet() {
         <div>
             <div className={styles.fundoCloset}>
                 <div>
-                    <NavBar />
+                    <NavBarCloset />
                 </div>
 
                 <div>

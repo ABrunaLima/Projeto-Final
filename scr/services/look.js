@@ -1,6 +1,5 @@
 import {
     insertNewLook,
-    insertClothingToLook,
     updateClothingToLook,
     getLookById,
     removeLookById
@@ -18,9 +17,9 @@ import { showOneCloth } from "./clothing";
 }
 */
 
-
-async function createNewLook(clothes) {
-    const look = insertNewLook(clothes)
+//cria um id de look
+async function createNewLook(clothes, closetId) {
+    const look = insertNewLook(clothes, closetId)
     return look
 }
 
