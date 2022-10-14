@@ -1,5 +1,5 @@
 import styles from '/styles/navbar.module.css'
-import { Login } from './login'
+import { Login } from './buttons/login'
 import { useRouter } from 'next/router'
 import closet from '../../pages/closet'
 
