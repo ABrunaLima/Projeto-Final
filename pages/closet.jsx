@@ -72,11 +72,16 @@ export default function closet() {
                     <NavBarCloset />
                 </div>
 
+                <div className={styles.title}>
+                    <h2>Closets</h2>
+                </div>
+                <div className={styles.buttonCriaClosetVAzio}>
+                    <button onClick={() => novoClosetVazio()}>Adicionar Novo Closet</button>
+                </div>
+
                 <div>
                     <div className={styles.closet}>
-                        <div className={styles.title}>
-                            <h2>Closets</h2>
-                        </div>
+
 
                         <section>
 
@@ -101,9 +106,7 @@ export default function closet() {
 
                         </section>
 
-                        <div className={styles.buttonCriaClosetVAzio}>
-                            <button onClick={() => novoClosetVazio()}>adiciona</button>
-                        </div>
+
 
                         {/* ------------------------------------------------------------------------------------------------ */}
                     </div>

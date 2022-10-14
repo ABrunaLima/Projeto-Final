@@ -72,7 +72,7 @@ DELETE: api/clothing/:id
     GET: api/closet
 
 4. - API que deleta um closet especifico (x)
-    DELETE: api/closet/:id
+    DELETE: api/closet/
 --------------------------------
 
 
