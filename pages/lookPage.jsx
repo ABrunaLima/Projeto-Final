@@ -46,18 +46,11 @@ export default function LookPage() {
         const partesDeBaixo = Roupas.filter(r => r.slot === "bottom")
         const indiceRoupaBaixo = Math.floor(Math.random() * partesDeBaixo.length);
 
-<<<<<<< HEAD
         setLookAtual(prevLook => ({
             "top": partesDeCima[indiceRoupaCima],
             "middle": partesMeio[indiceRoupaMeio],
             "bottom": partesDeBaixo[indiceRoupaBaixo]
         }));
-    }
-=======
-        setLookAtual(prevLook => ({"top": partesDeCima[indiceRoupaCima],
-            "middle": partesMeio[indiceRoupaMeio],
-            "bottom": partesDeBaixo[indiceRoupaBaixo]}));
->>>>>>> 2de7625ceeebfd7dece46844d6430298aea8229e
 
 
     }
@@ -69,9 +62,9 @@ export default function LookPage() {
             <NavBarSearch />
             <div className={styles.linhaDoCarrossel}>
                 <div className={styles.filtros}>
-                    <Filtro 
-                    data={roupaFiltrada}
-                    setData={setRoupaFiltrada} />
+                    <Filtro
+                        data={roupaFiltrada}
+                        setData={setRoupaFiltrada} />
                 </div>
                 <div className={styles.look}>
                     <Look

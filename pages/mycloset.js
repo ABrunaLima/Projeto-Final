@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { NavBarSearch } from "../scr/components/navBarSearch"
-import { NavBarMyCloset } from "../scr/components/navBarMyCloset"
-=======
-import { NavBar} from "../scr/components/navbar"
->>>>>>> 2de7625ceeebfd7dece46844d6430298aea8229e
+import { NavBar } from "../scr/components/navbar"
 import styles from "../styles/mycloset.module.css"
 import { useState } from "react"
 
@@ -46,11 +41,7 @@ export default function BotoesClose() {
 
     return (
         <div className={styles.pagina}>
-<<<<<<< HEAD
-            <NavBarMyCloset />
-=======
             <NavBar />
->>>>>>> 2de7625ceeebfd7dece46844d6430298aea8229e
             <div className={styles.container}>
                 <div className={styles.borda}>
                     <div className={styles.botoes}>
@@ -73,26 +64,26 @@ export default function BotoesClose() {
     )
 }
 
-export function Look({ top = {}, bottom = {}, middle = {}, onDelete}) {
+export function Look({ top = {}, bottom = {}, middle = {}, onDelete }) {
 
 
     console.log(top, middle, bottom)
     return <div>
         <div className={styles.top}>
             <span className={styles.minus}>
-            <button onClick={() => onDelete(top)}><img src="/images/minus.png" /></button>
+                <button onClick={() => onDelete(top)}><img src="/images/minus.png" /></button>
             </span>
             <img src={top.pathToImage} />
         </div>
         <div className={styles.middle}>
-        <span className={styles.minus}>
-            <button onClick={() => onDelete(middle)} ><img src="/images/minus.png" /></button>
+            <span className={styles.minus}>
+                <button onClick={() => onDelete(middle)} ><img src="/images/minus.png" /></button>
             </span>
             <img src={middle.pathToImage} />
         </div>
         <div className={styles.bottom}>
-        <span className={styles.minus}>
-            <button onClick={() => onDelete(bottom)}><img src="/images/minus.png" /></button>
+            <span className={styles.minus}>
+                <button onClick={() => onDelete(bottom)}><img src="/images/minus.png" /></button>
             </span>
             <img src={bottom.pathToImage} />
         </div>
