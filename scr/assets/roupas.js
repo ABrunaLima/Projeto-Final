@@ -37,7 +37,7 @@ export const Roupas = [
         "title": "Beige Pants",
         "slot": "middle",
         "type": "pants",
-        "color": "beige",
+        "color": "beige"
     },
     {
         "id": "6",
