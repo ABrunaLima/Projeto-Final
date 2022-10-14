@@ -35,13 +35,7 @@ export function Login() {
 
     return (
         <div>
-            <div className={styles.botaoLogin}>
-                {
-                    !isLoggedIn
-                        ? <button onClick={() => login()}><img src="/login.png" /></button>
-                        : "Marta Maria"
-                }
-            </div>
+            <div className={styles.botaoLogin}><button onClick={() => login()}><img src="/login.png" /></button></div>
         </div>
     )
 }
