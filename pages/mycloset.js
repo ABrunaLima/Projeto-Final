@@ -1,6 +1,6 @@
 import { NavBar } from "../scr/components/navbar"
 import styles from "../styles/mycloset.module.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const top = {
     "id": "1",
@@ -30,14 +30,40 @@ const middle = {
 }
 
 export default function BotoesClose() {
+   
+    const [receberLook, setReceberLook] = useState({})
 
-    fetch("/api/clothing", {
-        method: "GET",
-        headers: {
-            "authorization": 'localStorage.getItem("token")'
-        },
+    async function novoClosetVazio() {
 
-    })
+        const res = await fetch("api/closet/look", {
+            method: "POST",
+            headers: {
+                "authorization": localStorage.getItem("token")
+            }
+        })
+
+
+        getLooks()
+    }
+
+    async function getLooks(id) {
+        const res = await fetch("api/closet/" + id, {
+            method: "GET",
+            headers: {
+                "authorization": localStorage.getItem("token")
+            }
+        })
+        const json = await res.json()
+        console.log(json)
+        setReceberLook(json)
+
+
+    }
+
+    useEffect(() => {
+        getLooks()
+    }, [])
+
 
     return (
         <div className={styles.pagina}>
