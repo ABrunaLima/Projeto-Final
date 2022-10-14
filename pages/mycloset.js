@@ -1,5 +1,6 @@
 import { NavBarSearch } from "../scr/components/navBarSearch"
 import styles from "../styles/mycloset.module.css"
+import { useState } from "react"
 
 const top = {
     "id": "1",
@@ -30,6 +31,14 @@ const middle = {
 
 export default function BotoesClose() {
 
+    fetch("/api/clothing", {
+        method: "GET",
+        headers: {
+            "authorization": 'localStorage.getItem("token")'
+        },
+
+    })
+
     return (
         <div className={styles.pagina}>
             <NavBarSearch />
@@ -56,6 +65,8 @@ export default function BotoesClose() {
 }
 
 export function Look({ top = {}, bottom = {}, middle = {} }) {
+
+
     console.log(top, middle, bottom)
     return <div>
         <div className={styles.top}>
@@ -69,4 +80,5 @@ export function Look({ top = {}, bottom = {}, middle = {} }) {
         </div>
 
     </div>
+
 }

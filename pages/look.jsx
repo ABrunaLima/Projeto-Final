@@ -16,7 +16,7 @@ export default function LookPage() {
     console.log(lookAtual)
 
     const saveLook = () => {
-        fetch("/api/look", {
+        fetch("/api/closet/:id/look", {
             method: "POST",
             headers: {
                 "Content-Type": "app",
@@ -30,14 +30,14 @@ export default function LookPage() {
 
         setLookAtual(prevLook => ({ ...prevLook, [item.slot]: item }))
 
-    
+
     }
 
     function geraAleatorio(item) {
         const indiceRoupa = Math.floor(Math.random() * Roupas.length);
-        
-        setLookAtual(prevLook => ({...prevLook, [indiceRoupa.slot]: item }));
-      }
+
+        setLookAtual(prevLook => ({ ...prevLook, [indiceRoupa.slot]: item }));
+    }
 
 
 
