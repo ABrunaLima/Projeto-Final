@@ -34,7 +34,7 @@
 }
 
 .fora {
-    background-color: aliceblue;
+    background-color: rgb(46, 126, 196);
     display: flex;
     margin-left: -90%;
 
@@ -57,9 +57,4 @@
     height: 18px;
     width: 18px;
     border: black solid 1px;
-}
-
-.divcores {
-    background-color: rgba(255, 255, 0, 0.265);
-    display: flex;
 }

@@ -43,20 +43,20 @@ export function Filtro({ data, setData }) {
             </div>
 
             <div className={styles.cores}>
-                <div className={styles.divcores}>
-                    <button onClick={() => corFiltrada(data)}>All</button>
-                    <button onClick={() => corFiltrada('beige')}><img src="/cores/beige.jpeg" /></button>
-                    <button onClick={() => corFiltrada('black')}><img src="/cores/black.jpeg" /></button>
-                    <button onClick={() => corFiltrada('blue')}><img src="/cores/blue.png" /></button>
-                    <button onClick={() => corFiltrada('green')}><img src="/cores/green.png" /></button>
-                    <button onClick={() => corFiltrada('grey')}><img src="/cores/grey.jpeg" /></button>
-                    <button onClick={() => corFiltrada('pink')}><img src="/cores/pink.png" /></button>
-                    <button onClick={() => corFiltrada('purple')}><img src="/cores/purple.png" /></button>
-                    <button onClick={() => corFiltrada('red')}><img src="/cores/red.png" /></button>
-                    <button onClick={() => corFiltrada('white')}><img src="/cores/white.png" /></button>
-                </div>
-            </div>
 
+                <button onClick={() => corFiltrada(data)}>All</button>
+                <button onClick={() => corFiltrada('beige')}><img src="/cores/beige.jpeg" /></button>
+                <button onClick={() => corFiltrada('black')}><img src="/cores/black.jpeg" /></button>
+                <button onClick={() => corFiltrada('blue')}><img src="/cores/blue.png" /></button>
+                <button onClick={() => corFiltrada('green')}><img src="/cores/green.png" /></button>
+                <button onClick={() => corFiltrada('grey')}><img src="/cores/grey.jpeg" /></button>
+                <button onClick={() => corFiltrada('pink')}><img src="/cores/pink.png" /></button>
+                <button onClick={() => corFiltrada('purple')}><img src="/cores/purple.png" /></button>
+                <button onClick={() => corFiltrada('red')}><img src="/cores/red.png" /></button>
+                <button onClick={() => corFiltrada('white')}><img src="/cores/white.png" /></button>
+            </div>
         </div>
+
+
     );
 }
