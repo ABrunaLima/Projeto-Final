@@ -1,18 +1,18 @@
 import styles from '/styles/navbar.module.css'
 import { Login } from './buttons/login'
 import { useRouter } from 'next/router'
-import closet from '../../pages/closet'
 
 
-export function NavBarSearch() {
+
+export function NavBarCloset() {
     const navItems = [
         {
             label: "Home",
             path: "/"
         },
         {
-            label: "Closet",
-            path: "/closet"                 //editado, testes de caminho        Daniel
+            label: "Look",
+            path: "/lookPage"                 //editado, testes de caminho        Daniel
         }
     ]
 

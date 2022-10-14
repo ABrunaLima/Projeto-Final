@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import closet from '../../pages/closet'
 
 
-export function NavBarSearch() {
+export function NavBarMyCloset() {
     const navItems = [
         {
             label: "Home",
@@ -12,7 +12,11 @@ export function NavBarSearch() {
         },
         {
             label: "Closet",
-            path: "/closet"                 //editado, testes de caminho        Daniel
+            path: "/closet"
+        },
+        {
+            label: "Look",
+            path: "/lookPage"                 //editado, testes de caminho        Daniel
         }
     ]
 

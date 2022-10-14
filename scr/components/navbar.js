@@ -1,7 +1,6 @@
 import styles from '/styles/navbar.module.css'
-import { Login } from './login'
+import { Login } from './buttons/login'
 import { useRouter } from 'next/router'
-import closet from '../../pages/closet'
 
 
 export function NavBar() {
@@ -9,6 +8,10 @@ export function NavBar() {
         {
             label: "Home",
             path: "/"
+        },
+        {
+            label: "Look",
+            path: "/lookPage"
         },
         {
             label: "Closet",
@@ -24,7 +27,7 @@ export function NavBar() {
                 </div>
                 <div className={styles.textos}>
                     {
-                        navItems.map(n => <NavItem {...n} />)
+                        navItems.map((n, i) => <NavItem key={i} {...n} />)
                     }
                     <Login />
                 </div>
