@@ -30,14 +30,14 @@
 
 .item:hover {
     cursor: pointer;
-  
+
 }
 
 .imagem img {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 500px;
+    max-height: 40vh;
     object-fit: fill;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
@@ -63,6 +63,7 @@
 .botoes {
     width: 100%;
     text-align: center;
+    margin-right: 20%;
 }
 
 .botoes img {

@@ -81,8 +81,8 @@
 .top img {
     width: auto;
     height: auto;
-    max-width: 500px;
-    max-height: 200px;
+    max-width: 100%;
+    max-height: 21vh;
     justify-content: flex;
     left: 50%;
     top: 50%;
@@ -93,8 +93,8 @@
 .middle img {
     width: auto;
     height: auto;
-    max-width: 500px;
-    max-height: 300px;
+    max-width: 100%;
+    max-height: 28vh;
     justify-content: flex;
     left: 50%;
     top: 50%;
@@ -105,8 +105,8 @@
 .bottom img {
     width: auto;
     height: auto;
-    max-width: 500px;
-    max-height: 100px;
+    max-width: 100%;
+    max-height: 11vh;
     justify-content: flex;
     left: 50%;
     top: 50%;

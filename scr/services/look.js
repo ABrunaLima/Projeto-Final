@@ -17,7 +17,7 @@ import { showOneCloth } from "./clothing";
 }
 */
 
-//cria um id de look
+//cria um look
 async function createNewLook(clothes, closetId) {
     const look = insertNewLook(clothes, closetId)
     return look
