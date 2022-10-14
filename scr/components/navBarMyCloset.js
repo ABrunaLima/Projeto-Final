@@ -4,36 +4,46 @@ import { useRouter } from 'next/router'
 import closet from '../../pages/closet'
 
 
-export function NavBar() {
+export function NavBarMyCloset() {
     const navItems = [
         {
             label: "Home",
             path: "/"
         },
         {
-            label: "Look",
-            path: "/lookPage"
+            label: "Closet",
+            path: "/closet"
         },
         {
-            label: "Closet",
-            path: "/closet"                 //editado, testes de caminho        Daniel
+            label: "Look",
+            path: "/lookPage"                 //editado, testes de caminho        Daniel
         }
     ]
 
+
     return (
-        <div>
+        <>
             <nav className={styles.nav}>
                 <div className={styles.marca}>
                     <img src="/images/LogoPreto.png" />
                 </div>
+
+                <div className={styles.searchBar}>
+                    <div className={styles.search}>
+                        <div><img src='/lupa.png' /></div>
+                        <input type="text" placeholder="Search..." />
+
+
+                    </div>
+                </div>
                 <div className={styles.textos}>
                     {
-                        navItems.map(n => <NavItem {...n} />)
+                        navItems.map(n => <NavItem key={n.label} {...n} />)
                     }
                     <Login />
                 </div>
             </nav>
-        </div>
+        </>
     )
 }
 
