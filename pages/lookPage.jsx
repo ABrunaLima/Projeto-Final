@@ -26,18 +26,31 @@ export default function LookPage() {
 
         })
     }
+
     const alterarLook = (item) => {
-
         setLookAtual(prevLook => ({ ...prevLook, [item.slot]: item }))
-
-    
     }
 
-    function geraAleatorio(item) {
-        const indiceRoupa = Math.floor(Math.random() * Roupas.length);
-        
-        setLookAtual(prevLook => ({...prevLook, [indiceRoupa.slot]: item }));
-      }
+    const removerLook = (item) => {
+        setLookAtual(prevLook => ({ ...prevLook, [item.slot]: {} }))
+    }
+
+
+    function geraAleatorio() {
+        const partesDeCima = Roupas.filter(r => r.slot === "top")
+        const indiceRoupaCima = Math.floor(Math.random() * partesDeCima.length);
+
+        const partesMeio = Roupas.filter(r => r.slot === "middle")
+        const indiceRoupaMeio = Math.floor(Math.random() * partesMeio.length);
+
+        const partesDeBaixo = Roupas.filter(r => r.slot === "bottom")
+        const indiceRoupaBaixo = Math.floor(Math.random() * partesDeBaixo.length);
+
+        setLookAtual(prevLook => ({"top": partesDeCima[indiceRoupaCima],
+            "middle": partesMeio[indiceRoupaMeio],
+            "bottom": partesDeBaixo[indiceRoupaBaixo]}));
+    }
+
 
 
 
@@ -51,6 +64,7 @@ export default function LookPage() {
                 </div>
                 <div className={styles.look}>
                     <Look
+                        onDelete={removerLook}
                         top={lookAtual.top}
                         middle={lookAtual.middle}
                         bottom={lookAtual.bottom}

@@ -1,9 +1,9 @@
 .container{
-    background: #cccdcf;
+    background: #cccdcf; 
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
 }
 
 .linhaDoCarrossel {

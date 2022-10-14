@@ -55,10 +55,11 @@ export default function BotoesClose() {
     )
 }
 
-export function Look({ top = {}, bottom = {}, middle = {} }) {
+export function Look({ top = {}, bottom = {}, middle = {}, onDelete }) {
     console.log(top, middle, bottom)
+
     return <div>
-        <div className={styles.top}>
+        <div onClick={() => onDelete(top)} className={styles.top}>
             <img src={top.pathToImage} />
         </div>
         <div className={styles.middle}>
