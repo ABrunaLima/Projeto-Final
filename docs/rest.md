@@ -37,11 +37,14 @@ DELETE: api/clothing/:id
 --------------LOOK-------------- (hard, socorro)
 
 1. - API que edita informações de um look específico
-    (DELETE, POST, GET, PATCH)
-    api/look/:id
+    (DELETE, GET, PATCH)
+    api/closet/:id/
 
 2. - API que cria um look; (doing)
-    POST: api/look
+
+    (salva o look no ultimo closet criado)
+
+    POST: api/closet/look
     Body: {clothes: {
         top: clotheId
         middle: clotheId
@@ -49,7 +52,6 @@ DELETE: api/clothing/:id
     }}
     Headers: {token}
 
-2. - API que cria um look;
 
 3. - API que retorna todos os looks;
 
