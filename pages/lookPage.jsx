@@ -31,8 +31,8 @@ export default function LookPage() {
         setLookAtual(prevLook => ({ ...prevLook, [item.slot]: item }))
     }
 
-    const removerLook = (item) => {
-        setLookAtual(prevLook => ({ ...prevLook, [item.slot]: {} }))
+    const removerLook = (top) => {
+        setLookAtual(prevLook => ({ ...prevLook, [top.slot]: {} }))
     }
 
 
@@ -46,23 +46,12 @@ export default function LookPage() {
         const partesDeBaixo = Roupas.filter(r => r.slot === "bottom")
         const indiceRoupaBaixo = Math.floor(Math.random() * partesDeBaixo.length);
 
-<<<<<<< HEAD:pages/look.jsx
-
-    }
-
-    function geraAleatorio(item) {
-        const indiceRoupa = Math.floor(Math.random() * Roupas.length);
-
-        setLookAtual(prevLook => ({ ...prevLook, [indiceRoupa.slot]: item }));
-    }
-=======
         setLookAtual(prevLook => ({"top": partesDeCima[indiceRoupaCima],
             "middle": partesMeio[indiceRoupaMeio],
             "bottom": partesDeBaixo[indiceRoupaBaixo]}));
+
+
     }
-
->>>>>>> 8679a5c59069cd3b14a35717e1e0265365d5b433:pages/lookPage.jsx
-
 
 
 
@@ -71,7 +60,9 @@ export default function LookPage() {
             <NavBarSearch />
             <div className={styles.linhaDoCarrossel}>
                 <div className={styles.filtros}>
-                    <Filtro setData={setRoupaFiltrada} />
+                    <Filtro 
+                    data={roupaFiltrada}
+                    setData={setRoupaFiltrada} />
                 </div>
                 <div className={styles.look}>
                     <Look
