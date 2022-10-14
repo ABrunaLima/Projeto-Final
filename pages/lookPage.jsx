@@ -5,11 +5,11 @@ import { Filtro } from '../scr/components/filtros'
 import { NavBarSearch } from '../scr/components/navBarSearch'
 import styles from '../styles/lookPage.module.css'
 import { Roupas } from '../scr/assets/roupas'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Look } from './mycloset'
 
 export default function LookPage() {
-    const [roupaFiltrada, setRoupaFiltrada] = useState(Roupas)
+    const [roupaFiltrada, setRoupaFiltrada] = useState([])
     const [lookAtual, setLookAtual] = useState({})
 
 
@@ -26,16 +26,12 @@ export default function LookPage() {
 
         })
     }
-
     const alterarLook = (item) => {
         setLookAtual(prevLook => ({ ...prevLook, [item.slot]: item }))
     }
-
     const removerLook = (top) => {
         setLookAtual(prevLook => ({ ...prevLook, [top.slot]: {} }))
     }
-
-
     function geraAleatorio() {
         const partesDeCima = Roupas.filter(r => r.slot === "top")
         const indiceRoupaCima = Math.floor(Math.random() * partesDeCima.length);
@@ -52,6 +48,20 @@ export default function LookPage() {
             "bottom": partesDeBaixo[indiceRoupaBaixo]
         }));
     }
+
+    async function dameRoupas() {
+       const res = await fetch("/api/clothing")
+       if(res.status === 200) {
+            const json = await res.json()
+            console.log(json)
+            setRoupaFiltrada(json)
+       }
+    }
+
+    useEffect(() => {
+        dameRoupas()
+    }, [])
+
     return (
         <div className={styles.container}>
             <NavBarSearch />
